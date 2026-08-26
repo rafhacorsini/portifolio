@@ -135,10 +135,55 @@ body {
   .animate-shimmer-sage {
     animation: none;
   }
+  .animate-shimmer-light {
+    animation: none;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
   body, a, button, [role="button"], input, select, textarea {
     cursor: none !important;
+  }
+}
+
+/* Touch devices get a much cheaper rendering path.
+
+   The film-grain overlays are SVG feTurbulence filters painted over a
+   200% x 200% viewport box. At a phone's device pixel ratio that filter
+   region is several million pixels of 4-octave fractal noise per overlay,
+   each pinned in memory by `will-change` and composited through a blend
+   mode. Nine of them is hundreds of megabytes of backing store on a device
+   that has very little to spare, which is what stalls scrolling.
+
+   Same visual result, near-zero cost: rasterize the noise once into a small
+   seamless tile and repeat it. `stitchTiles` keeps the edges continuous. */
+@media (pointer: coarse) {
+  .grain-cv > .animate-grain {
+    display: none;
+  }
+
+  .grain-cv {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 120px 120px;
+  }
+
+  /* backdrop-filter forces the browser to re-sample and re-blur whatever sits
+     behind the element. The tech-stack pills carry one each and live inside a
+     marquee that never stops moving, so that cost is paid every frame, forever.
+     At this blur radius, over pills that are already 70% opaque, dropping it is
+     not perceptible on a phone. */
+  .backdrop-blur-xs,
+  .backdrop-blur-xl {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  /* Animating background-position on background-clip:text repaints the glyphs
+     on the main thread every frame; it cannot be handed to the compositor.
+     Five of these run continuously. The text keeps its gradient, just static. */
+  .animate-shimmer-sage,
+  .animate-shimmer-light {
+    animation: none;
   }
 }
