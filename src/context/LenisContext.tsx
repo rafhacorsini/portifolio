@@ -7,6 +7,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// On iOS the URL bar collapses and expands as you scroll, which resizes the
+// viewport mid-gesture. Left alone, ScrollTrigger treats that as a layout
+// change and recalculates every start/end while scrubbed timelines are
+// running, so animations snap to the wrong progress. This tells it to ignore
+// height-only resizes on touch devices.
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 type LenisContextType = {
   lenis: Lenis | null;
 };
@@ -99,7 +106,25 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       });
     };
 
-    const resizeObserver = new ResizeObserver(syncScrollHeight);
+    // ignoreMobileResize only covers ScrollTrigger's own resize listener. This
+    // observer would otherwise reintroduce the exact problem it guards against:
+    // the URL bar collapsing changes the body's height, which fires here and
+    // refreshes ScrollTrigger — and rebuilds every parallax trigger from
+    // scratch — in the middle of a scroll gesture. On touch, only a width
+    // change (rotation, split view) is a layout change worth reacting to —
+    // except during the first couple of seconds, while fonts and images are
+    // still settling and a height change really does mean the page grew.
+    let lastWidth = window.innerWidth;
+    const mountedAt = Date.now();
+
+    const resizeObserver = new ResizeObserver(() => {
+      const width = window.innerWidth;
+      const heightOnly = width === lastWidth;
+      const settled = Date.now() - mountedAt > 2000;
+      if (isTouchDevice && heightOnly && settled) return;
+      lastWidth = width;
+      syncScrollHeight();
+    });
     resizeObserver.observe(document.body);
     window.addEventListener('load', syncScrollHeight);
 

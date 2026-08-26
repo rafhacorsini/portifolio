@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PixelDissolve from '@/components/PixelDissolve';
+import { scrubFor } from '@/lib/scrub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -269,7 +270,7 @@ export default function Hero({ isLoaded = true }: HeroProps) {
             trigger: containerRef.current,
             start: 'top top',
             end: 'bottom top',
-            scrub: 1,
+            scrub: scrubFor(1),
           },
         });
 
@@ -281,7 +282,7 @@ export default function Hero({ isLoaded = true }: HeroProps) {
             trigger: containerRef.current,
             start: 'top top',
             end: 'bottom top',
-            scrub: 1,
+            scrub: scrubFor(1),
           },
         });
 
@@ -292,7 +293,7 @@ export default function Hero({ isLoaded = true }: HeroProps) {
             trigger: containerRef.current,
             start: 'top top',
             end: 'bottom top',
-            scrub: 1,
+            scrub: scrubFor(1),
           },
         });
 

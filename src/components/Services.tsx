@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { scrubFor } from '@/lib/scrub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -274,7 +275,7 @@ export default function Services() {
           trigger: section,
           start: 'top top',
           end: 'bottom bottom',
-          scrub: 0.65,
+          scrub: scrubFor(0.65),
           invalidateOnRefresh: true,
         },
       });
@@ -336,7 +337,7 @@ export default function Services() {
       className="relative z-30 w-full h-[300vh] bg-[#FFFFFF] text-[#121818] select-none"
     >
       <div
-        className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center"
+        className="sticky top-0 h-stage w-full overflow-hidden flex items-center justify-center"
         style={{ perspective: '1200px' }}
       >
         <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">

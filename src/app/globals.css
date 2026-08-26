@@ -187,3 +187,22 @@ body {
     animation: none;
   }
 }
+
+/* Sticky scroll stages. `100vh` on iOS is the viewport with the URL bar
+   hidden, so while the bar is showing the stage is taller than the screen and
+   the end of the section sits below the fold, out of step with the animation
+   scrubbing against it. `svh` is the height with the bar visible, and unlike
+   `dvh` it stays constant while the bar collapses — so the stage never
+   resizes mid-scroll. Split across @supports rather than two
+   declarations on one rule, because the minifier collapses those into the
+   last one and drops the fallback; browsers without `svh` must keep their
+   current behaviour. */
+.h-stage {
+  height: 100vh;
+}
+
+@supports (height: 100svh) {
+  .h-stage {
+    height: 100svh;
+  }
+}

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { scrubFor } from '@/lib/scrub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,7 +113,7 @@ export default function PixelDissolve({ triggerRef, color = '#FFFFFF' }: PixelDi
         trigger: triggerEl,
         start: 'top top',
         end: 'bottom top',
-        scrub: 1,
+        scrub: scrubFor(1),
         onUpdate: (self) => {
           const visibleCount = Math.min(totalCells, Math.floor(totalCells * self.progress * 1.15));
 

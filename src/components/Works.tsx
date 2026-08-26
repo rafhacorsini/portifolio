@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { scrubFor } from '@/lib/scrub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -166,7 +167,7 @@ export default function Works() {
               trigger: section,
               start: 'top bottom',
               end: 'top 72%',
-              scrub: 0.4,
+              scrub: scrubFor(0.4),
             },
           }
         );
@@ -181,7 +182,7 @@ export default function Works() {
               trigger: section,
               start: 'top 72%',
               end: 'top 35%',
-              scrub: 0.4,
+              scrub: scrubFor(0.4),
             },
           }
         );
@@ -198,7 +199,7 @@ export default function Works() {
               trigger: section,
               start: 'top bottom',
               end: 'top 72%',
-              scrub: 0.4,
+              scrub: scrubFor(0.4),
             },
           }
         );
@@ -213,7 +214,7 @@ export default function Works() {
               trigger: section,
               start: 'top 80%',
               end: 'top 68%',
-              scrub: 0.4,
+              scrub: scrubFor(0.4),
             },
           }
         );

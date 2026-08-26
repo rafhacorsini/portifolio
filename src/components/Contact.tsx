@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLenis } from '@/context/LenisContext';
+import { scrubFor } from '@/lib/scrub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,7 +93,7 @@ export default function Contact() {
             trigger: section,
             start: 'top top',
             end: 'bottom bottom',
-            scrub: 0.65,
+            scrub: scrubFor(0.65),
             invalidateOnRefresh: true,
           },
         });
@@ -188,7 +189,7 @@ export default function Contact() {
     >
       <div id="manifesto" className="absolute top-0 left-0" />
 
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between">
+      <div className="sticky top-0 h-stage w-full overflow-hidden flex flex-col justify-between">
 
         <div className="absolute inset-0 w-full h-full flex flex-col justify-between px-6 sm:px-10 md:px-16 lg:px-20 py-8 sm:py-10 md:py-12 pointer-events-none">
           <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-overlay opacity-[0.25]">
