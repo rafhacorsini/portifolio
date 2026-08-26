@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafhael Corsini — Desenvolvedor Fullstack Junior</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Calibri", "Arial", sans-serif;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 10.5pt;
+            line-height: 1.55;
+        }
+
+        a { color: #1a1a1a; text-decoration: none; }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 44px 48px;
+        }
+
+        /* ─── HEADER ─── */
+        header { margin-bottom: 22px; }
+
+        .name {
+            font-family: "Georgia", serif;
+            font-size: 26pt;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: #000;
+            line-height: 1;
+        }
+
+        .role-label {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 6px 0 12px;
+        }
+
+        .contact-line {
+            font-size: 9.5pt;
+            color: #444;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 14px;
+            border-top: 2px solid #000;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 0;
+        }
+
+        .contact-line span::before { content: "• "; color: #bbb; }
+        .contact-line span:first-child::before { content: ""; }
+
+        /* ─── SECTIONS ─── */
+        section { margin-top: 18px; }
+
+        section h2 {
+            font-family: "Georgia", serif;
+            font-size: 11pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #000;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            margin-bottom: 12px;
+        }
+
+        /* ─── ENTRY ─── */
+        .entry { margin-bottom: 13px; }
+
+        .entry-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            font-size: 10.5pt;
+            color: #000;
+        }
+
+        .entry-date {
+            font-size: 9.5pt;
+            color: #666;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .entry-sub {
+            font-style: italic;
+            color: #444;
+            font-size: 10pt;
+            margin: 2px 0 5px;
+        }
+
+        ul { padding-left: 18px; }
+        ul li { margin-bottom: 4px; font-size: 10.5pt; }
+
+        /* ─── SKILLS GRID ─── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 5px 12px;
+        }
+
+        .skill-label { font-weight: bold; font-size: 10pt; color: #000; }
+        .skill-value { font-size: 10pt; color: #333; }
+
+        /* ─── PRINT ─── */
+        @media print {
+            body { background: none; }
+            .page { padding: 0; max-width: none; }
+            @page { margin: 2cm; size: A4; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <header>
+        <div class="name">Rafhael Corsini Silva</div>
+        <div class="role-label">Desenvolvedor Fullstack Junior</div>
+        <div class="contact-line">
+            <span>São Paulo, BR</span>
+            <span>(13) 98110-7358</span>
+            <span><a href="https://linkedin.com/in/rafhael-corsini-084392323" target="_blank">linkedin.com/in/rafhael-corsini-084392323</a></span>
+            <span><a href="https://github.com/rafhacorsini" target="_blank">github.com/rafhacorsini</a></span>
+        </div>
+    </header>
+
+    <!-- RESUMO -->
+    <section>
+        <h2>Resumo Profissional</h2>
+        <p>Desenvolvedor Fullstack Junior com experiência prática em todo o ciclo de desenvolvimento de aplicações web modernas — do backend à interface. Domínio do ecossistema <strong>Node.js / Python (back-end)</strong> e <strong>React / Next.js (front-end)</strong>, com sólida habilidade em integração de APIs RESTful, modelagem de banco de dados relacional e deploy em nuvem. Grad. em <strong>Marketing</strong> e cursando <strong>Análise e Desenvolvimento de Sistemas (FIAP)</strong>, o que me torna capaz de alinhar soluções técnicas ao impacto real de negócio. Adicionalemente capacitado em aplicação de <strong>IA Generativa</strong> (LangChain, OpenAI) tanto no client quanto no server-side, entregando produtos inteligentes de ponta a ponta.</p>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section>
+        <h2>Competências Técnicas</h2>
+        <div class="skills-grid">
+            <span class="skill-label">Front-end</span>
+            <span class="skill-value">React.js, Next.js (App Router, SSR, SSG), TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Framer Motion</span>
+
+            <span class="skill-label">Back-end</span>
+            <span class="skill-value">Node.js, Python, criação de APIs RESTful, lógica server-side, BFF (Backend for Frontend)</span>
+
+            <span class="skill-label">Banco de Dados</span>
+            <span class="skill-value">PostgreSQL (modelagem relacional, queries SQL), integração com ORM</span>
+
+            <span class="skill-label">APIs & Integração</span>
+            <span class="skill-value">Consumo e criação de APIs REST, Fetch API, Axios, autenticação JWT, manipulação de WebSockets</span>
+
+            <span class="skill-label">IA & Automação</span>
+            <span class="skill-value">OpenAI API, LangChain (RAG, Chatbots, Agentes), n8n (automação de fluxos)</span>
+
+            <span class="skill-label">Ferramentas</span>
+            <span class="skill-value">Git / GitHub, Vercel (CI/CD), Figma, Linux (terminal básico)</span>
+
+            <span class="skill-label">Diferencial</span>
+            <span class="skill-value">Visão de produto (Marketing), UX orientado a negócio, Engenharia de Prompt, Mobile-First</span>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section>
+        <h2>Experiência Técnica</h2>
+
+        <div class="entry">
+            <div class="entry-top">
+                <span class="entry-title">Desenvolvedor Fullstack Independente — Projetos & Portfólio</span>
+                <span class="entry-date">2023 – Presente</span>
+            </div>
+            <div class="entry-sub">Desenvolvimento de aplicações web end-to-end para clientes e projetos pessoais</div>
+            <ul>
+                <li>Construção de aplicações web completas do zero (front + back), com <strong>Next.js + Node.js</strong> e banco de dados <strong>PostgreSQL</strong>, com arquitetura orientada a componentes e rotas de API protegidas.</li>
+                <li>Integração robusta de APIs RESTful externas no client-side, incluindo controle de estados assíncronos (loading, error, empty), revalidação de dados e autenticação via token JWT.</li>
+                <li>Deploy completo em Vercel com pipeline CI/CD automático integrado ao repositório do GitHub, gerenciamento de variáveis de ambiente e domínio customizado.</li>
+                <li>Integração de modelos de linguagem (OpenAI GPT-4) em interfaces React com suporte a streaming de tokens, criando chatbots responsivos e fluxos de IA embarcada no produto.</li>
+                <li>Construção de automações end-to-end em <strong>n8n</strong> combinando webhooks, manipulação de dados e chamadas a APIs externas, reduzindo processos manuais em mais de 80%.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section>
+        <h2>Formação Acadêmica</h2>
+
+        <div class="entry">
+            <div class="entry-top">
+                <span class="entry-title">Análise e Desenvolvimento de Sistemas — <em>Cursando</em></span>
+                <span class="entry-date">Previsão: Dez 2026</span>
+            </div>
+            <div class="entry-sub">FIAP — Faculdade de Informática e Administração Paulista, São Paulo</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <span class="entry-title">Graduação em Marketing</span>
+                <span class="entry-date">Concluído</span>
+            </div>
+            <div class="entry-sub">Formação com foco em Estratégia Digital, Comportamento do Consumidor e Comunicação</div>
+        </div>
+    </section>
+
+    <!-- CERTIFICAÇÕES -->
+    <section>
+        <h2>Certificações</h2>
+        <ul>
+            <li><strong>Qualificação em Desenvolvimento e Design Web 2.0</strong> — FIAP (Dez 2025)</li>
+            <li><strong>Qualificação em Análise de Sistemas e Prototipação Web</strong> — FIAP (Jun 2025)</li>
+            <li><strong>LangChain: Técnicas Avançadas de RAG</strong> — Alura (Out 2025)</li>
+            <li><strong>LangChain: Criando Chatbots Inteligentes com RAG</strong> — Alura (Set 2025)</li>
+            <li><strong>Engenharia de Prompt para IA Generativa</strong> — Alura (Abr 2025)</li>
+        </ul>
+    </section>
+
+</div>
+</body>
+</html>
