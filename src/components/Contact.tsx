@@ -191,7 +191,7 @@ export default function Contact() {
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between">
 
         <div className="absolute inset-0 w-full h-full flex flex-col justify-between px-6 sm:px-10 md:px-16 lg:px-20 py-8 sm:py-10 md:py-12 pointer-events-none">
-          <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-overlay opacity-[0.25]">
+          <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-overlay opacity-[0.25]">
             <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
               <svg className="w-full h-full">
                 <filter id="manifestoNoiseClean">
@@ -288,7 +288,7 @@ export default function Contact() {
           ref={contactWrapperRef}
           className="absolute inset-0 z-50 w-full h-full bg-[#FFFFFF] text-[#121818] px-6 sm:px-12 md:px-16 lg:px-24 py-8 sm:py-10 md:py-12 flex flex-col justify-between select-none overflow-hidden"
         >
-          <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
+          <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
             <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
               <svg className="w-full h-full">
                 <filter id="contactBrandNewNoise">

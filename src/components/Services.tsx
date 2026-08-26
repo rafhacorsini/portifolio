@@ -98,8 +98,11 @@ const CARDS: ServiceCard[] = [
   },
 ];
 
+// Displayed at ~142px tall, decoded by up to 4 concurrent players at once —
+// q_auto:low is visually indistinguishable at that size and meaningfully
+// cheaper to decode than the higher quality tier.
 const CARD_MEDIA =
-  'https://res.cloudinary.com/dwmrunhxa/video/upload/q_auto:good,f_auto,w_600/v1787695773/4382-178617337_sqbb03.mp4';
+  'https://res.cloudinary.com/dwmrunhxa/video/upload/q_auto:low,f_auto,w_400/v1787695773/4382-178617337_sqbb03.mp4';
 
 const SAGE_GRADIENT =
   'radial-gradient(ellipse 90% 80% at 50% 38%, #9ab2b0 0%, #7f9795 52%, #68807e 100%)';
@@ -161,6 +164,7 @@ export default function Services() {
   const techColRef = useRef<HTMLDivElement>(null);
   const runnerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const [flippedId, setFlippedId] = useState<string | null>(null);
 
@@ -169,6 +173,23 @@ export default function Services() {
     if (!section) return;
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // The 4 cards each carry a looping video; all four decode simultaneously
+    // whenever they're mounted, which is one of the heaviest costs on mobile.
+    // They all live in the same full-screen sticky stage, so a single
+    // section-level observer is enough: pause every video once the section
+    // scrolls off-screen, resume when it comes back.
+    const videoObserver = new IntersectionObserver(
+      ([entry]) => {
+        videoRefs.current.forEach((video) => {
+          if (!video) return;
+          if (entry.isIntersecting) video.play().catch(() => {});
+          else video.pause();
+        });
+      },
+      { rootMargin: '200px 0px' }
+    );
+    videoObserver.observe(section);
 
     const ctx = gsap.context(() => {
       const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
@@ -302,7 +323,10 @@ export default function Services() {
       }
     }, section);
 
-    return () => ctx.revert();
+    return () => {
+      videoObserver.disconnect();
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -315,7 +339,7 @@ export default function Services() {
         className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center"
         style={{ perspective: '1200px' }}
       >
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
+        <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
           <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
             <svg className="w-full h-full">
               <filter id="servicesNoise">
@@ -458,6 +482,9 @@ export default function Services() {
                     }`}
                   >
                     <video
+                      ref={(el) => {
+                        if (el) videoRefs.current[index] = el;
+                      }}
                       src={CARD_MEDIA}
                       autoPlay
                       muted

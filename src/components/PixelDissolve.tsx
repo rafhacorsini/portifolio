@@ -180,7 +180,7 @@ export default function PixelDissolve({ triggerRef, color = '#FFFFFF' }: PixelDi
       className="absolute inset-0 w-full h-full pointer-events-none z-[100] overflow-hidden"
       aria-hidden="true"
     >
-      <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden mix-blend-multiply opacity-[0.22]">
+      <div className="grain-cv pointer-events-none absolute inset-0 z-10 overflow-hidden mix-blend-multiply opacity-[0.22]">
         <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
           <svg className="w-full h-full">
             <filter id="pixelNoise">

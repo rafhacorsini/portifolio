@@ -200,7 +200,7 @@ export default function About() {
       id="sobre"
       className="relative w-full min-h-screen bg-[#FFFFFF] text-[#121818] px-6 sm:px-10 md:px-16 lg:px-20 pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 flex flex-col justify-between select-none z-10 overflow-hidden -mt-[1px] md:mt-0"
     >
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
+        <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-multiply opacity-[0.22]">
           <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
             <svg className="w-full h-full">
               <filter id="aboutNoise">

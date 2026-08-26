@@ -69,7 +69,7 @@ export default function Footer() {
           'radial-gradient(ellipse 85% 75% at 50% 45%, #627576 0%, #536465 50%, #3e4d4e 100%)',
       }}
     >
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-overlay opacity-[0.35]">
+      <div className="grain-cv pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-overlay opacity-[0.35]">
         <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
           <svg className="w-full h-full">
             <filter id="footerNoise">

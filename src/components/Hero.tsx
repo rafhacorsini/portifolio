@@ -346,7 +346,7 @@ export default function Hero({ isLoaded = true }: HeroProps) {
           'radial-gradient(ellipse 80% 75% at 50% 45%, #627576 0%, #536465 50%, #465556 100%)',
       }}
     >
-      <div className="pointer-events-none absolute inset-0 z-30 overflow-hidden mix-blend-overlay opacity-[0.38]">
+      <div className="grain-cv pointer-events-none absolute inset-0 z-30 overflow-hidden mix-blend-overlay opacity-[0.38]">
         <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
           <svg className="w-full h-full">
             <filter id="heroNoise">

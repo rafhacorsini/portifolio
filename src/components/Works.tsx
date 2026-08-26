@@ -132,6 +132,26 @@ export default function Works() {
       bgVideoRef.current?.pause();
     }
 
+    // Decorative background video: stop decoding it entirely once the section
+    // scrolls off-screen. A looping <video> keeps costing CPU/battery even
+    // while invisible unless something explicitly pauses it — on mobile this
+    // is one of the main causes of scroll jank on a page with several videos.
+    let bgVideoObserver: IntersectionObserver | null = null;
+    if (!prefersReducedMotion && bgVideoRef.current) {
+      bgVideoObserver = new IntersectionObserver(
+        ([entry]) => {
+          if (!bgVideoRef.current) return;
+          if (entry.isIntersecting) {
+            bgVideoRef.current.play().catch(() => {});
+          } else {
+            bgVideoRef.current.pause();
+          }
+        },
+        { rootMargin: '200px 0px' }
+      );
+      bgVideoObserver.observe(section);
+    }
+
     const ctx = gsap.context(() => {
       if (prefersReducedMotion) return;
 
@@ -282,7 +302,10 @@ export default function Works() {
       });
     }, section);
 
-    return () => ctx.revert();
+    return () => {
+      bgVideoObserver?.disconnect();
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -319,7 +342,7 @@ export default function Works() {
       />
 
       <div
-        className="pointer-events-none absolute inset-0 z-[1] overflow-hidden mix-blend-overlay opacity-[0.3]"
+        className="grain-cv pointer-events-none absolute inset-0 z-[1] overflow-hidden mix-blend-overlay opacity-[0.3]"
         aria-hidden="true"
       >
         <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
@@ -402,7 +425,7 @@ export default function Works() {
               </>
             )}
 
-            <div className="pointer-events-none absolute inset-0 overflow-hidden mix-blend-overlay opacity-[0.35]">
+            <div className="grain-cv pointer-events-none absolute inset-0 overflow-hidden mix-blend-overlay opacity-[0.35]">
               <div className="animate-grain absolute -top-[50%] -left-[50%] w-[200%] h-[200%]">
                 <svg className="w-full h-full">
                   <rect width="100%" height="100%" filter="url(#worksNoise)" />

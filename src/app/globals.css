@@ -40,6 +40,17 @@ body {
   90% { transform: translate(-2%, 2%); }
 }
 
+/* Each section renders its own full-viewport grain overlay. On mobile GPUs,
+   keeping every one of those composited layers alive at once — most of them
+   off-screen — is what tanks scroll performance. content-visibility skips
+   paint/compositing entirely while a layer is off-screen; since every grain
+   wrapper is `absolute inset-0` with zero layout contribution, this is safe
+   and doesn't touch scroll height. */
+.grain-cv {
+  content-visibility: auto;
+  contain-intrinsic-size: 100% 100%;
+}
+
 .animate-grain {
   animation: grain35mm 0.75s steps(1) infinite;
   will-change: transform;
