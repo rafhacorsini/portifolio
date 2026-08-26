@@ -490,7 +490,7 @@ export default function Services() {
                       muted
                       loop
                       playsInline
-                      preload="auto"
+                      preload="metadata"
                       className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-[#27534b] mix-blend-color opacity-85" />
