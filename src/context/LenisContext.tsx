@@ -20,30 +20,43 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
 
-    const lenis = new Lenis({
-      duration: 1.35,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 0.92,
-      touchMultiplier: 1.25,
-      infinite: false,
-    });
+    // Touch devices already have buttery, OS-accelerated momentum scrolling
+    // running off the main thread. Lenis re-implements scroll in JS on top of
+    // that — on older/weaker phones (this is the classic iOS Safari complaint)
+    // that JS-driven scroll can't keep up with native and the whole page reads
+    // as janky, everywhere, all the time, not tied to any one section. So on
+    // coarse pointers we skip Lenis entirely and let the OS scroll natively;
+    // ScrollTrigger works fine off native scroll on its own, no Lenis needed.
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setLenisInstance(lenis);
+    let lenis: Lenis | null = null;
+    let tickerCallback: ((time: number) => void) | null = null;
 
-    lenis.on('scroll', ScrollTrigger.update);
+    if (!prefersReducedMotion && !isTouchDevice) {
+      lenis = new Lenis({
+        duration: 1.35,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 0.92,
+        touchMultiplier: 1.25,
+        infinite: false,
+      });
 
-    const tickerCallback = (time: number) => {
-      lenis.raf(time * 1000);
-    };
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLenisInstance(lenis);
 
-    gsap.ticker.add(tickerCallback);
-    gsap.ticker.lagSmoothing(0);
+      lenis.on('scroll', ScrollTrigger.update);
+
+      tickerCallback = (time: number) => {
+        lenis!.raf(time * 1000);
+      };
+
+      gsap.ticker.add(tickerCallback);
+      gsap.ticker.lagSmoothing(0);
+    }
 
     let parallaxTriggers: ScrollTrigger[] = [];
 
@@ -80,7 +93,7 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const syncScrollHeight = () => {
       cancelAnimationFrame(refreshFrame);
       refreshFrame = requestAnimationFrame(() => {
-        lenis.resize();
+        lenis?.resize();
         ScrollTrigger.refresh();
         setupParallaxElements();
       });
@@ -95,8 +108,8 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       resizeObserver.disconnect();
       window.removeEventListener('load', syncScrollHeight);
       parallaxTriggers.forEach((t) => t.kill());
-      gsap.ticker.remove(tickerCallback);
-      lenis.destroy();
+      if (tickerCallback) gsap.ticker.remove(tickerCallback);
+      lenis?.destroy();
     };
   }, []);
 
