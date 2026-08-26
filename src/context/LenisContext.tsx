@@ -33,6 +33,7 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       infinite: false,
     });
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLenisInstance(lenis);
 
     lenis.on('scroll', ScrollTrigger.update);

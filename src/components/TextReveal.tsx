@@ -70,6 +70,7 @@ export default function TextReveal({
     return () => ctx.revert();
   }, [delay, duration, stagger, triggerStart, once]);
 
+  // eslint-disable-next-line react-hooks/refs
   itemsRef.current = [];
 
   const renderContent = () => {
