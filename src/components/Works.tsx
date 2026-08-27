@@ -57,6 +57,14 @@ const PROJECTS: ProjectItem[] = [
     image:
       'https://res.cloudinary.com/dwmrunhxa/image/upload/v1787668050/ChatGPT_Image_25_de_ago._de_2026_11_25_23_soickl.png',
   },
+  {
+    id: 'lumen',
+    number: '05',
+    title: 'Lumen',
+    tag: 'SAAS / PRODUCT DESIGN',
+    year: '2026',
+    image: null,
+  },
 ];
 
 export default function Works() {
