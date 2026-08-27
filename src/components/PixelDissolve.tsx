@@ -120,16 +120,32 @@ export default function PixelDissolve({ triggerRef, color = '#FFFFFF' }: PixelDi
           if (visibleCount !== lastVisibleCount) {
             const start = Math.min(visibleCount, lastVisibleCount);
             const end = Math.max(visibleCount, lastVisibleCount);
+            const growing = visibleCount > lastVisibleCount;
+
+            // A fast flick can jump `progress` a long way in a single frame.
+            // Tweening every cell that crosses in that frame - potentially
+            // hundreds - is what stutters. Only the leading edge needs the
+            // fade flourish; cells further back can just snap. On a
+            // normal-speed scroll this window is wider than the delta
+            // anyway, so every cell still gets the tween as before.
+            const ANIMATE_WINDOW = 24;
+            const animateFrom = growing ? Math.max(start, end - ANIMATE_WINDOW) : start;
+            const animateTo = growing ? end : Math.min(end, start + ANIMATE_WINDOW);
 
             for (let i = start; i < end; i++) {
-              if (newCells[i]) {
-                const targetOpacity = i < visibleCount ? 1 : 0;
-                gsap.to(newCells[i].el, {
+              const cell = newCells[i];
+              if (!cell) continue;
+              const targetOpacity = i < visibleCount ? 1 : 0;
+              if (i >= animateFrom && i < animateTo) {
+                gsap.to(cell.el, {
                   opacity: targetOpacity,
                   duration: 0.35,
                   ease: 'power2.out',
                   overwrite: 'auto',
                 });
+              } else {
+                gsap.killTweensOf(cell.el);
+                cell.el.style.opacity = String(targetOpacity);
               }
             }
             lastVisibleCount = visibleCount;

@@ -189,20 +189,24 @@ body {
 }
 
 /* Sticky scroll stages. `100vh` on iOS is the viewport with the URL bar
-   hidden, so while the bar is showing the stage is taller than the screen and
-   the end of the section sits below the fold, out of step with the animation
-   scrubbing against it. `svh` is the height with the bar visible, and unlike
-   `dvh` it stays constant while the bar collapses — so the stage never
-   resizes mid-scroll. Split across @supports rather than two
-   declarations on one rule, because the minifier collapses those into the
-   last one and drops the fallback; browsers without `svh` must keep their
-   current behaviour. */
+   hidden — the tallest it ever gets. `100svh` (bar always counted as shown)
+   is the shortest. Tried svh first since it never resizes mid-scroll, but
+   that's exactly the problem: the moment the real bar collapses, the stage
+   is shorter than what's actually visible, leaving a gap of bare section
+   background below it and pulling the centered content up out of place.
+   `dvh` tracks the real visible height continuously, so the stage always
+   matches the screen exactly — the only cost is a brief resize while the bar
+   itself is mid-animation, which the touch-device guards on the body
+   ResizeObserver and ScrollTrigger.config below already absorb. Split across
+   @supports rather than two declarations on one rule, because the minifier
+   collapses those into the last one and drops the fallback; browsers
+   without `dvh` must keep their current behaviour. */
 .h-stage {
   height: 100vh;
 }
 
-@supports (height: 100svh) {
+@supports (height: 100dvh) {
   .h-stage {
-    height: 100svh;
+    height: 100dvh;
   }
 }
