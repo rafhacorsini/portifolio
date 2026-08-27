@@ -238,13 +238,13 @@ export default function Contact() {
 
             <div className="w-full flex flex-col items-start overflow-hidden py-2">
               <div ref={line1Ref} className="w-full will-change-transform">
-                <h2 className="font-sans font-light text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] text-[#bed1cb]/75 uppercase whitespace-nowrap">
+                <h2 className="font-sans font-light text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] text-[#bed1cb]/75 uppercase sm:whitespace-nowrap">
                   A MAIORIA DOS SITES <span className="font-normal text-white/90 ml-3 sm:ml-4">É ESQUECÍVEL.</span>
                 </h2>
               </div>
               <div ref={centerAccentRef} className="w-full max-w-[580px] h-px bg-gradient-to-r from-transparent via-[#4ea895]/40 to-transparent my-4 sm:my-6 will-change-transform origin-left" />
               <div ref={line2Ref} className="w-full will-change-transform pl-[4vw] sm:pl-[8vw] md:pl-[12vw]">
-                <h2 className="font-sans text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] uppercase whitespace-nowrap">
+                <h2 className="font-sans text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] uppercase sm:whitespace-nowrap">
                   <span className="animate-shimmer-light font-extrabold">O SEU NÃO PRECISA SER.</span>
                 </h2>
               </div>
@@ -385,7 +385,7 @@ export default function Contact() {
                 <p className="font-sans font-medium text-sm sm:text-[15px] text-[#10201c] mt-1.5">
                   Full-Time · PJ / CLT · Remoto
                 </p>
-                <span className="block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
+                <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
                   Disponível para contratação global
                 </span>
               </div>
@@ -405,7 +405,7 @@ export default function Contact() {
                   </span>
                   <span className="group-hover:translate-y-0.5 transition-transform text-xs">↗</span>
                 </a>
-                <span className="block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
+                <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
                   Versão atualizada 2026
                 </span>
               </div>
@@ -417,7 +417,7 @@ export default function Contact() {
                 <p className="font-sans font-medium text-sm sm:text-[15px] text-[#10201c] mt-1.5">
                   Santos, SP — Brasil
                 </p>
-                <span className="block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
+                <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
                   Fuso: BRT (UTC−3) · 100% Remoto
                 </span>
               </div>

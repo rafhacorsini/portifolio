@@ -555,7 +555,7 @@ export default function Services() {
                       </p>
                     </div>
 
-                    <div className="flex flex-col gap-0.5">
+                    <div className="hidden sm:flex flex-col gap-0.5">
                       <span className={`font-mono text-[7px] tracking-[0.22em] uppercase font-semibold ${dark ? 'text-[#a3c9c1]' : 'text-[#27534b]'}`}>
                         PARA QUEM É:
                       </span>
@@ -565,7 +565,7 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <div className={`border-t pt-2 flex flex-col gap-0.5 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
+                  <div className={`hidden sm:flex border-t pt-2 flex-col gap-0.5 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
                     <span className={`font-mono text-[6.5px] tracking-[0.22em] uppercase ${dark ? 'text-white/50' : 'text-[#10201c]/50'}`}>
                       ENTREGÁVEIS:
                     </span>
