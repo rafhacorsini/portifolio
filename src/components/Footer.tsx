@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLenis } from '@/context/LenisContext';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+  const t = useTranslations('footer');
   const { lenis } = useLenis();
   const footerRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -111,20 +113,20 @@ export default function Footer() {
           </span>
           <div className="flex flex-col justify-center">
             <span className="text-[8px] sm:text-[9px] font-mono tracking-wider text-zinc-300 uppercase [writing-mode:vertical-lr] rotate-180">
-              /end
+              {t('endLabel')}
             </span>
           </div>
         </div>
         <div className="flex-1 h-px bg-white/[0.08] mx-4 sm:mx-8 md:mx-10" />
         <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.24em] text-zinc-300 uppercase shrink-0 font-medium">
-          /CREDITS
+          {t('creditsLabel')}
         </div>
       </div>
 
       <div className="relative z-10 w-full my-auto flex flex-col items-center justify-center text-center py-6 sm:py-10">
         <div className="flex items-center gap-2 font-mono text-[8px] sm:text-[9px] tracking-[0.3em] uppercase text-zinc-300 mb-3 sm:mb-4">
           <span>[</span>
-          <span className="text-white font-medium">DESIGN & CREATIVE ENGINEERING</span>
+          <span className="text-white font-medium">{t('designEngineering')}</span>
           <span>]</span>
         </div>
 
@@ -136,7 +138,7 @@ export default function Footer() {
         </h2>
 
         <p className="font-mono text-[8px] sm:text-[9.5px] tracking-[0.24em] uppercase text-zinc-300/80 mt-4 max-w-[500px]">
-          CREATIVE & FRONT-END DEVELOPER · BRAZIL
+          {t('tagline')}
         </p>
       </div>
 
@@ -159,7 +161,7 @@ export default function Footer() {
         </div>
 
         <div data-parallax="0.15" className="hidden lg:block text-zinc-400">
-          <span>SANTOS, BRAZIL · 23°57&apos;S 46°20&apos;W</span>
+          <span>{t('coords')}</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -168,7 +170,7 @@ export default function Footer() {
             onClick={handleScrollToTop}
             className="group flex items-center gap-1.5 text-white hover:text-zinc-200 transition-colors cursor-pointer py-1 px-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/5 active:scale-95"
           >
-            <span>BACK TO TOP</span>
+            <span>{t('backToTop')}</span>
             <span className="group-hover:-translate-y-0.5 transition-transform">↑</span>
           </button>
         </div>

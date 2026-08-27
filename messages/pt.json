@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "nav": {
+      "home": "INICIO",
+      "about": "SOBRE",
+      "work": "TRABALHOS",
+      "services": "SERVICOS",
+      "contact": "CONTATO"
+    },
+    "menu": {
+      "openAria": "Abrir Menu",
+      "navigation": "[ NAVEGAÇÃO ]",
+      "close": "[ FECHAR ✕ ]"
+    },
+    "bioLeft": {
+      "tag": "Experiências digitais imersivas",
+      "connector": "construídas entre",
+      "artDirection": "direção de arte",
+      "interactionDesign": "design de interação",
+      "motion": "movimento",
+      "softwareEngineering": "engenharia de software."
+    },
+    "bioRight": {
+      "visualDirection": "Direção visual,",
+      "prototyping": "prototipagem avançada,",
+      "interaction": "interação",
+      "creativeDevelopment": "desenvolvimento criativo",
+      "unified": "unificados em uma mesma prática."
+    }
+  },
+  "about": {
+    "introLabel": "/introdução",
+    "sectionLabel": "/SOBRE",
+    "title": {
+      "line1": "Front-end designer",
+      "line2": "e desenvolvedor criativo",
+      "line3": "com foco em experiências",
+      "line4a": "digitais,",
+      "line4b": "motion e narrativa visual."
+    },
+    "paragraph": "Meu trabalho nasce da vontade de transformar websites em experiências que despertam curiosidade — onde cada movimento, transição e detalhe existe por uma razão.",
+    "meta": {
+      "fieldLabel": "Campo",
+      "fieldValue": "Design e Desenvolvimento",
+      "approachLabel": "Abordagem",
+      "approachValue": "Menos, mas melhor",
+      "locationLabel": "Localizacao",
+      "locationValue": "Santos - SP",
+      "focusLabel": "Foco",
+      "focusValue": "Web · Motion · IA"
+    },
+    "photoBadge": {
+      "yearsExp": "Anos Exp.",
+      "details": "Detalhes"
+    }
+  },
+  "works": {
+    "sideLabel": "Menos, mas melhor",
+    "imagePlaceholder": "[ imagem ]",
+    "indexLabel": "/índice",
+    "sectionLabel": "/TRABALHOS",
+    "endOfIndex": "[ FIM DO ÍNDICE ]",
+    "location": "SANTOS, BR — 2026"
+  },
+  "services": {
+    "capabilitiesLabel": "/capacidades",
+    "sectionLabel": "/SERVIÇOS",
+    "microTag": "CAPACIDADES TÉCNICAS // 04 PILARES",
+    "stackLabel": "[ STACK ]",
+    "techTags": [
+      "FRONTEND",
+      "BACKEND",
+      "WEBGL",
+      "GSAP",
+      "FIGMA",
+      "IA / LLM"
+    ],
+    "runner": "DESIGN · CÓDIGO · MOTION · IA",
+    "available": "[ DISPONÍVEL PARA PROJETOS SELECIONADOS ]",
+    "est": "EST. 2026",
+    "craftCode": "CRAFT & CODE",
+    "cardBack": {
+      "details": "DETAILS ↺",
+      "scope": "SCOPE",
+      "whatItDoes": "O QUE FAZ:",
+      "whoItsFor": "PARA QUEM É:",
+      "deliverables": "ENTREGÁVEIS:"
+    },
+    "cards": {
+      "development": {
+        "title": "Desenvolvimento",
+        "detailTitle": "Engenharia Full-stack & IA",
+        "whatItDoes": "Construção de aplicações completas e escaláveis, integrando frontend moderno com agentes de IA, automações e APIs de alta performance.",
+        "whoItsFor": "Startups, produtos digitais e empresas que precisam de código limpo, velocidade e inteligência artificial nativa.",
+        "deliverables": "WEB APPS · APIS · AGENTES IA · BANCO DE DADOS"
+      },
+      "webDesign": {
+        "title": "Web Design",
+        "detailTitle": "Design de Interface & Direção Visual",
+        "whatItDoes": "Criação de linguagens visuais exclusivas, sistemas de design consistentes e interfaces focadas em usabilidade e autoridade de marca.",
+        "whoItsFor": "Marcas e fundadores que desejam elevar a percepção de valor e criar uma presença digital memorável.",
+        "deliverables": "UI/UX · DESIGN SYSTEM · PROTÓTIPOS FIGMA · ART DIRECTION"
+      },
+      "motion": {
+        "title": "Motion / Interação",
+        "detailTitle": "Motion & Engenharia Criativa",
+        "whatItDoes": "Animações fluidas a 60fps, transições cinematográficas e interatividade WebGL que transformam páginas comuns em experiências vivas.",
+        "whoItsFor": "Projetos que buscam destaque criativo, prêmios internacionais e engajamento acima da média.",
+        "deliverables": "GSAP SCROLL · THREE.JS · WEBGL · MICRO-INTERAÇÕES"
+      },
+      "strategy": {
+        "title": "Estratégia / SEO",
+        "detailTitle": "Performance & Otimização Técnica",
+        "whatItDoes": "Otimização minuciosa para carregamento instantâneo, pontuação 100 no Core Web Vitals e indexação técnica máxima no Google.",
+        "whoItsFor": "Negócios que buscam tráfego qualificado, melhor conversão e máxima velocidade em qualquer dispositivo.",
+        "deliverables": "CORE VITALS 100/100 · SEO ON-PAGE · CRO · ANALYTICS"
+      }
+    }
+  },
+  "contact": {
+    "manifesto": {
+      "visionTag": "VISÃO // AUTORIA",
+      "engineeringTag": "DESIGN + ENGENHARIA",
+      "line1a": "A MAIORIA DOS SITES",
+      "line1b": "É ESQUECÍVEL.",
+      "line2": "O SEU NÃO PRECISA SER.",
+      "readyToBuild": "2026 // READY TO BUILD",
+      "nextStep": "O PRÓXIMO PASSO",
+      "isYours": "É SEU.",
+      "manifestoLabel": "05 // MANIFESTO",
+      "letsTalk": "VAMOS CONVERSAR"
+    },
+    "startLabel": "/iniciar",
+    "sectionLabel": "/CONTATO",
+    "opportunityTag": "NOVO PROJETO OU OPORTUNIDADE",
+    "gotIdea": "TEM UMA IDEIA?",
+    "makeItReal": "VAMOS TORNÁ-LA REAL.",
+    "startViaEmail": "INICIAR VIA E-MAIL",
+    "copyEmailAria": "Copiar e-mail",
+    "copied": "✓ COPIADO!",
+    "copy": "COPIAR ↺",
+    "whatsappDirect": "WHATSAPP DIRETO →",
+    "details": {
+      "availabilityLabel": "[ 01 // DISPONIBILIDADE ]",
+      "availabilityValue": "Full-Time · PJ / CLT · Remoto",
+      "availabilitySub": "Disponível para contratação global",
+      "resourcesLabel": "[ 02 // RECURSOS ]",
+      "resourcesValue": "Ver / Baixar Currículo (CV)",
+      "resourcesSub": "Versão atualizada 2026",
+      "locationLabel": "[ 03 // LOCALIZAÇÃO ]",
+      "locationValue": "Santos, SP — Brasil",
+      "locationSub": "Fuso: BRT (UTC−3) · 100% Remoto"
+    },
+    "backToTop": "[ VOLTAR AO TOPO"
+  },
+  "footer": {
+    "endLabel": "/fim",
+    "creditsLabel": "/CRÉDITOS",
+    "designEngineering": "DESIGN & CREATIVE ENGINEERING",
+    "tagline": "CRIATIVO & DESENVOLVEDOR FRONT-END · BRASIL",
+    "coords": "SANTOS / SP · 23°57'S 46°20'W",
+    "backToTop": "VOLTAR AO TOPO"
+  }
+}

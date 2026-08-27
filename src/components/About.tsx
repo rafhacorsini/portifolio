@@ -17,6 +17,7 @@ import {
   CursorIcon,
 } from './TechIcons';
 import { Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ const TECH_STACK = [
 ];
 
 export default function About() {
+  const t = useTranslations('about');
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const headerLineRef = useRef<HTMLDivElement>(null);
@@ -224,7 +226,7 @@ export default function About() {
           </span>
           <div className="flex flex-col justify-center">
             <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180 select-none">
-              /intro
+              {t('introLabel')}
             </span>
           </div>
         </div>
@@ -232,7 +234,7 @@ export default function About() {
         <div ref={headerLineRef} className="flex-1 h-px bg-[#27534b]/12 mx-4 sm:mx-8 md:mx-10" />
 
         <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#35635a] uppercase select-none shrink-0 font-medium">
-          /ABOUT
+          {t('sectionLabel')}
         </div>
       </div>
 
@@ -243,20 +245,20 @@ export default function About() {
               ref={(el) => { if (el) titleLinesRef.current[0] = el; }}
               className="block pl-4 sm:pl-8 md:pl-14 sm:whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
             >
-              Front-end designer
+              {t('title.line1')}
             </span>
             <span
               ref={(el) => { if (el) titleLinesRef.current[1] = el; }}
               className="block sm:whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
             >
-              and creative developer
+              {t('title.line2')}
             </span>
             <span
               ref={(el) => { if (el) titleLinesRef.current[2] = el; }}
               className="block sm:whitespace-nowrap will-change-transform"
             >
               <span className="animate-shimmer-sage font-extrabold">
-                focused on digital
+                {t('title.line3')}
               </span>
             </span>
             <span
@@ -264,10 +266,10 @@ export default function About() {
               className="block sm:whitespace-nowrap will-change-transform"
             >
               <span className="animate-shimmer-sage font-extrabold">
-                experiences,
+                {t('title.line4a')}
               </span>{' '}
               <span className="text-[#27534b]/80 font-light">
-                motion and visual storytelling.
+                {t('title.line4b')}
               </span>
             </span>
           </h2>
@@ -276,7 +278,7 @@ export default function About() {
             ref={subParagraphRef}
             className="mt-4 sm:mt-5 font-mono text-[11px] sm:text-[11.5px] md:text-[12px] leading-[1.48] tracking-[-0.025em] text-[#5b8278] max-w-[340px] sm:max-w-[390px] md:max-w-[430px] will-change-transform"
           >
-            My work comes from a drive to turn websites into experiences that spark curiosity — where every movement, transition and detail exists for a reason.
+            {t('paragraph')}
           </p>
 
           <div
@@ -286,37 +288,37 @@ export default function About() {
           >
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Field
+                {t('meta.fieldLabel')}
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Design & Development
+                {t('meta.fieldValue')}
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Approach
+                {t('meta.approachLabel')}
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Less, but better
+                {t('meta.approachValue')}
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Location
+                {t('meta.locationLabel')}
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Santos, Brazil
+                {t('meta.locationValue')}
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Focus
+                {t('meta.focusLabel')}
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Web · Motion · AI
+                {t('meta.focusValue')}
               </span>
             </div>
           </div>
@@ -401,7 +403,7 @@ export default function About() {
                   +05
                 </span>
                 <span className="font-mono text-[7px] sm:text-[7.5px] leading-tight text-white/80 uppercase mt-1 tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                  Years Exp.
+                  {t('photoBadge.yearsExp')}
                 </span>
               </div>
 
@@ -410,7 +412,7 @@ export default function About() {
                   100%
                 </span>
                 <span className="font-mono text-[7px] sm:text-[7.5px] leading-tight text-white/80 uppercase mt-1 tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                  Details
+                  {t('photoBadge.details')}
                 </span>
               </div>
 

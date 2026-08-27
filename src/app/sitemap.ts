@@ -7,6 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
+      alternates: {
+        languages: {
+          pt: "https://www.rcorsini.com",
+          en: "https://www.rcorsini.com/en",
+        },
+      },
     },
   ];
 }

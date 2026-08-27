@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrubFor } from '@/lib/scrub';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,17 +30,17 @@ const gp = {
   strokeLinejoin: 'round' as const,
 };
 
-const CARDS: ServiceCard[] = [
+const buildCards = (t: ReturnType<typeof useTranslations<'services'>>): ServiceCard[] => [
   {
     id: 's1',
     variant: 'graphite',
     num: '01',
-    title: 'Development',
+    title: t('cards.development.title'),
     tag: 'NEXT.JS · REACT · NODE · LLMS',
-    detailTitle: 'Full-Stack Engineering & AI',
-    whatItDoes: 'Building complete, scalable applications that integrate modern frontend with AI agents, automation and high-performance APIs.',
-    whoItsFor: 'Startups, digital products and companies that need clean code, speed and native artificial intelligence.',
-    deliverables: 'WEB APPS · APIS · AI AGENTS · DATABASES',
+    detailTitle: t('cards.development.detailTitle'),
+    whatItDoes: t('cards.development.whatItDoes'),
+    whoItsFor: t('cards.development.whoItsFor'),
+    deliverables: t('cards.development.deliverables'),
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <path {...gp} d="M9 7 4 12l5 5M15 7l5 5-5 5" />
@@ -52,10 +53,10 @@ const CARDS: ServiceCard[] = [
     num: '02',
     title: 'Web Design',
     tag: 'UI/UX · FIGMA · DESIGN SYSTEM',
-    detailTitle: 'Interface Design & Visual Direction',
-    whatItDoes: 'Crafting exclusive visual languages, consistent design systems and interfaces focused on usability and brand authority.',
-    whoItsFor: 'Brands and founders who want to elevate perceived value and build a memorable digital presence.',
-    deliverables: 'UI/UX · DESIGN SYSTEM · FIGMA PROTOTYPES · ART DIRECTION',
+    detailTitle: t('cards.webDesign.detailTitle'),
+    whatItDoes: t('cards.webDesign.whatItDoes'),
+    whoItsFor: t('cards.webDesign.whoItsFor'),
+    deliverables: t('cards.webDesign.deliverables'),
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <rect {...gp} x="4" y="4" width="16" height="16" rx="1.5" />
@@ -67,12 +68,12 @@ const CARDS: ServiceCard[] = [
     id: 's3',
     variant: 'graphite',
     num: '03',
-    title: 'Motion / Interaction',
+    title: t('cards.motion.title'),
     tag: 'GSAP · LENIS · THREE.JS · SHADERS',
-    detailTitle: 'Motion & Creative Engineering',
-    whatItDoes: 'Fluid 60fps animations, cinematic transitions and WebGL interactivity that turn ordinary pages into living experiences.',
-    whoItsFor: 'Projects chasing creative standout, international awards and above-average engagement.',
-    deliverables: 'GSAP SCROLL · THREE.JS · WEBGL · MICRO-INTERACTIONS',
+    detailTitle: t('cards.motion.detailTitle'),
+    whatItDoes: t('cards.motion.whatItDoes'),
+    whoItsFor: t('cards.motion.whoItsFor'),
+    deliverables: t('cards.motion.deliverables'),
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <path {...gp} d="M4 17C8 6 16 6 20 17" />
@@ -84,12 +85,12 @@ const CARDS: ServiceCard[] = [
     id: 's4',
     variant: 'sage',
     num: '04',
-    title: 'Strategy / SEO',
+    title: t('cards.strategy.title'),
     tag: 'CORE VITALS · SEO · GROWTH',
-    detailTitle: 'Performance & Technical Optimization',
-    whatItDoes: 'Meticulous optimization for instant loading, a perfect Core Web Vitals score and maximum technical indexing on Google.',
-    whoItsFor: 'Businesses looking for qualified traffic, better conversion and maximum speed on any device.',
-    deliverables: 'CORE VITALS 100/100 · SEO ON-PAGE · CRO · ANALYTICS',
+    detailTitle: t('cards.strategy.detailTitle'),
+    whatItDoes: t('cards.strategy.whatItDoes'),
+    whoItsFor: t('cards.strategy.whoItsFor'),
+    deliverables: t('cards.strategy.deliverables'),
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <circle {...gp} cx="11" cy="11" r="6" />
@@ -155,9 +156,9 @@ const finalPose = (i: number) => ({
   scale: () => layout().finalScale,
 });
 
-const TECH_TAGS = ['FRONTEND', 'BACKEND', 'WEBGL', 'GSAP', 'FIGMA', 'AI / LLM'];
-
 export default function Services() {
+  const t = useTranslations('services');
+  const CARDS = buildCards(t);
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const headerLineRef = useRef<HTMLDivElement>(null);
@@ -375,13 +376,13 @@ export default function Services() {
             </span>
             <div className="flex flex-col justify-center">
               <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180">
-                /capabilities
+                {t('capabilitiesLabel')}
               </span>
             </div>
           </div>
           <div ref={headerLineRef} className="flex-1 h-px bg-[#27534b]/12 mx-4 sm:mx-8 md:mx-10" />
           <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#35635a] uppercase shrink-0 font-medium">
-            /SERVICES
+            {t('sectionLabel')}
           </div>
         </div>
 
@@ -391,7 +392,7 @@ export default function Services() {
             className="absolute top-[6.5rem] sm:top-[7.8rem] md:top-[9rem] lg:top-[10rem] left-6 sm:left-10 md:left-16 lg:left-20 flex items-center gap-1.5 font-mono text-[8px] sm:text-[9px] tracking-[0.22em] uppercase"
           >
             <span className="text-zinc-400">[</span>
-            <span className="text-[#27534b] font-medium">TECHNICAL CAPABILITIES // 04 PILLARS</span>
+            <span className="text-[#27534b] font-medium">{t('microTag')}</span>
             <span className="text-zinc-400">]</span>
           </div>
 
@@ -401,12 +402,12 @@ export default function Services() {
             className="hidden lg:flex absolute left-8 xl:left-16 top-1/2 -translate-y-1/2 flex-col gap-2.5 will-change-transform"
           >
             <div className="font-mono text-[7.5px] tracking-[0.25em] text-[#27534b]/60 uppercase mb-1">
-              [ STACK ]
+              {t('stackLabel')}
             </div>
-            {TECH_TAGS.map((t) => (
-              <span key={t} className="font-mono text-[8.5px] tracking-[0.2em] text-[#6f948a]/65 uppercase">
+            {t.raw('techTags').map((tag: string) => (
+              <span key={tag} className="font-mono text-[8.5px] tracking-[0.2em] text-[#6f948a]/65 uppercase">
                 <span className="text-[#bed1cb] mr-1.5">{'//'}</span>
-                {t}
+                {tag}
               </span>
             ))}
           </div>
@@ -417,7 +418,7 @@ export default function Services() {
             className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 will-change-transform"
           >
             <span className="block font-mono text-[8.5px] tracking-[0.32em] uppercase text-[#6f948a]/50 [writing-mode:vertical-lr] rotate-180 whitespace-nowrap">
-              DESIGN · CODE · MOTION · AI
+              {t('runner')}
             </span>
           </div>
 
@@ -426,13 +427,13 @@ export default function Services() {
             className="absolute bottom-6 sm:bottom-9 md:bottom-12 inset-x-6 sm:inset-x-10 md:inset-x-16 lg:inset-x-20 flex items-center justify-between font-mono text-[7.5px] sm:text-[8px] tracking-[0.22em] uppercase text-[#4a6a63]/80 border-t border-[#27534b]/10 pt-3 sm:pt-4"
           >
             <div className="flex items-center">
-              <span>[ AVAILABLE FOR SELECTED PROJECTS ]</span>
+              <span>{t('available')}</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="hidden sm:inline text-zinc-400">{'//'}</span>
-              <span className="text-[#27534b] font-medium">EST. 2026</span>
+              <span className="text-[#27534b] font-medium">{t('est')}</span>
               <span className="text-zinc-400">{'//'}</span>
-              <span>CRAFT & CODE</span>
+              <span>{t('craftCode')}</span>
             </div>
           </div>
         </div>
@@ -470,7 +471,7 @@ export default function Services() {
                     <span className={`font-mono text-[7.5px] tracking-[0.2em] uppercase px-2 py-0.5 rounded-full border backdrop-blur-xs ${
                       dark ? 'border-white/15 bg-white/10 text-white/80' : 'border-black/10 bg-black/10 text-[#10201c]'
                     }`}>
-                      DETAILS ↺
+                      {t('cardBack.details')}
                     </span>
                     <span className={`font-mono text-[13px] font-medium tracking-[0.2em] ${inkSoft}`}>
                       {card.num}
@@ -532,7 +533,7 @@ export default function Services() {
                 >
                   <div className={`flex items-center justify-between border-b pb-2 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
                     <span className={`font-mono text-[8px] tracking-[0.2em] uppercase font-semibold ${dark ? 'text-white/90' : 'text-[#10201c]'}`}>
-                      [ 0{index + 1} {'//'} SCOPE ]
+                      [ 0{index + 1} {'//'} {t('cardBack.scope')} ]
                     </span>
                     <span className={`font-mono text-[8px] tracking-[0.16em] uppercase ${inkSoft}`}>
                       {card.title}
@@ -548,7 +549,7 @@ export default function Services() {
 
                     <div className="flex flex-col gap-0.5">
                       <span className={`font-mono text-[7px] tracking-[0.22em] uppercase font-semibold ${dark ? 'text-[#a3c9c1]' : 'text-[#27534b]'}`}>
-                        WHAT IT DOES:
+                        {t('cardBack.whatItDoes')}
                       </span>
                       <p className={`font-mono text-[8.5px] leading-[1.48] tracking-normal ${inkSoft}`}>
                         {card.whatItDoes}
@@ -557,7 +558,7 @@ export default function Services() {
 
                     <div className="hidden sm:flex flex-col gap-0.5">
                       <span className={`font-mono text-[7px] tracking-[0.22em] uppercase font-semibold ${dark ? 'text-[#a3c9c1]' : 'text-[#27534b]'}`}>
-                        WHO IT&apos;S FOR:
+                        {t('cardBack.whoItsFor')}
                       </span>
                       <p className={`font-mono text-[8.5px] leading-[1.48] tracking-normal ${inkSoft}`}>
                         {card.whoItsFor}
@@ -567,7 +568,7 @@ export default function Services() {
 
                   <div className={`hidden sm:flex border-t pt-2 flex-col gap-0.5 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
                     <span className={`font-mono text-[6.5px] tracking-[0.22em] uppercase ${dark ? 'text-white/50' : 'text-[#10201c]/50'}`}>
-                      DELIVERABLES:
+                      {t('cardBack.deliverables')}
                     </span>
                     <span className={`font-mono text-[7px] tracking-[0.14em] uppercase ${ink} truncate`}>
                       {card.deliverables}

@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "nav": {
+      "home": "HOME",
+      "about": "ABOUT",
+      "work": "WORK",
+      "services": "SERVICES",
+      "contact": "CONTACT"
+    },
+    "menu": {
+      "openAria": "Open Menu",
+      "navigation": "[ NAVIGATION ]",
+      "close": "[ CLOSE ✕ ]"
+    },
+    "bioLeft": {
+      "tag": "Immersive digital experiences",
+      "connector": "built across",
+      "artDirection": "art direction",
+      "interactionDesign": "interaction design",
+      "motion": "motion",
+      "softwareEngineering": "software engineering."
+    },
+    "bioRight": {
+      "visualDirection": "Visual direction,",
+      "prototyping": "advanced prototyping,",
+      "interaction": "interaction",
+      "creativeDevelopment": "creative development",
+      "unified": "unified into a single practice."
+    }
+  },
+  "about": {
+    "introLabel": "/intro",
+    "sectionLabel": "/ABOUT",
+    "title": {
+      "line1": "Front-end designer",
+      "line2": "and creative developer",
+      "line3": "focused on digital",
+      "line4a": "experiences,",
+      "line4b": "motion and visual storytelling."
+    },
+    "paragraph": "My work comes from a drive to turn websites into experiences that spark curiosity — where every movement, transition and detail exists for a reason.",
+    "meta": {
+      "fieldLabel": "Field",
+      "fieldValue": "Design & Development",
+      "approachLabel": "Approach",
+      "approachValue": "Less, but better",
+      "locationLabel": "Location",
+      "locationValue": "Santos, Brazil",
+      "focusLabel": "Focus",
+      "focusValue": "Web · Motion · AI"
+    },
+    "photoBadge": {
+      "yearsExp": "Years Exp.",
+      "details": "Details"
+    }
+  },
+  "works": {
+    "sideLabel": "Less, but better",
+    "imagePlaceholder": "[ image ]",
+    "indexLabel": "/index",
+    "sectionLabel": "/WORK",
+    "endOfIndex": "[ END OF INDEX ]",
+    "location": "SANTOS, BRAZIL — 2026"
+  },
+  "services": {
+    "capabilitiesLabel": "/capabilities",
+    "sectionLabel": "/SERVICES",
+    "microTag": "TECHNICAL CAPABILITIES // 04 PILLARS",
+    "stackLabel": "[ STACK ]",
+    "techTags": [
+      "FRONTEND",
+      "BACKEND",
+      "WEBGL",
+      "GSAP",
+      "FIGMA",
+      "AI / LLM"
+    ],
+    "runner": "DESIGN · CODE · MOTION · AI",
+    "available": "[ AVAILABLE FOR SELECTED PROJECTS ]",
+    "est": "EST. 2026",
+    "craftCode": "CRAFT & CODE",
+    "cardBack": {
+      "details": "DETAILS ↺",
+      "scope": "SCOPE",
+      "whatItDoes": "WHAT IT DOES:",
+      "whoItsFor": "WHO IT'S FOR:",
+      "deliverables": "DELIVERABLES:"
+    },
+    "cards": {
+      "development": {
+        "title": "Development",
+        "detailTitle": "Full-Stack Engineering & AI",
+        "whatItDoes": "Building complete, scalable applications that integrate modern frontend with AI agents, automation and high-performance APIs.",
+        "whoItsFor": "Startups, digital products and companies that need clean code, speed and native artificial intelligence.",
+        "deliverables": "WEB APPS · APIS · AI AGENTS · DATABASES"
+      },
+      "webDesign": {
+        "title": "Web Design",
+        "detailTitle": "Interface Design & Visual Direction",
+        "whatItDoes": "Crafting exclusive visual languages, consistent design systems and interfaces focused on usability and brand authority.",
+        "whoItsFor": "Brands and founders who want to elevate perceived value and build a memorable digital presence.",
+        "deliverables": "UI/UX · DESIGN SYSTEM · FIGMA PROTOTYPES · ART DIRECTION"
+      },
+      "motion": {
+        "title": "Motion / Interaction",
+        "detailTitle": "Motion & Creative Engineering",
+        "whatItDoes": "Fluid 60fps animations, cinematic transitions and WebGL interactivity that turn ordinary pages into living experiences.",
+        "whoItsFor": "Projects chasing creative standout, international awards and above-average engagement.",
+        "deliverables": "GSAP SCROLL · THREE.JS · WEBGL · MICRO-INTERACTIONS"
+      },
+      "strategy": {
+        "title": "Strategy / SEO",
+        "detailTitle": "Performance & Technical Optimization",
+        "whatItDoes": "Meticulous optimization for instant loading, a perfect Core Web Vitals score and maximum technical indexing on Google.",
+        "whoItsFor": "Businesses looking for qualified traffic, better conversion and maximum speed on any device.",
+        "deliverables": "CORE VITALS 100/100 · SEO ON-PAGE · CRO · ANALYTICS"
+      }
+    }
+  },
+  "contact": {
+    "manifesto": {
+      "visionTag": "VISION // AUTHORSHIP",
+      "engineeringTag": "DESIGN + ENGINEERING",
+      "line1a": "MOST WEBSITES",
+      "line1b": "ARE FORGETTABLE.",
+      "line2": "YOURS DOESN'T HAVE TO BE.",
+      "readyToBuild": "2026 // READY TO BUILD",
+      "nextStep": "THE NEXT STEP",
+      "isYours": "IS YOURS.",
+      "manifestoLabel": "05 // MANIFESTO",
+      "letsTalk": "LET'S TALK"
+    },
+    "startLabel": "/start",
+    "sectionLabel": "/CONTACT",
+    "opportunityTag": "NEW PROJECT OR OPPORTUNITY",
+    "gotIdea": "GOT AN IDEA?",
+    "makeItReal": "LET'S MAKE IT REAL.",
+    "startViaEmail": "START VIA EMAIL",
+    "copyEmailAria": "Copy email",
+    "copied": "✓ COPIED!",
+    "copy": "COPY ↺",
+    "whatsappDirect": "WHATSAPP DIRECT →",
+    "details": {
+      "availabilityLabel": "[ 01 // AVAILABILITY ]",
+      "availabilityValue": "Full-Time · Contract · Remote",
+      "availabilitySub": "Available for global hire",
+      "resourcesLabel": "[ 02 // RESOURCES ]",
+      "resourcesValue": "View / Download CV",
+      "resourcesSub": "Updated 2026",
+      "locationLabel": "[ 03 // LOCATION ]",
+      "locationValue": "Santos, Brazil",
+      "locationSub": "Timezone: BRT (UTC−3) · 100% Remote"
+    },
+    "backToTop": "[ BACK TO TOP"
+  },
+  "footer": {
+    "endLabel": "/end",
+    "creditsLabel": "/CREDITS",
+    "designEngineering": "DESIGN & CREATIVE ENGINEERING",
+    "tagline": "CREATIVE & FRONT-END DEVELOPER · BRAZIL",
+    "coords": "SANTOS, BRAZIL · 23°57'S 46°20'W",
+    "backToTop": "BACK TO TOP"
+  }
+}
