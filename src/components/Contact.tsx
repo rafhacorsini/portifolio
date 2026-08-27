@@ -226,12 +226,12 @@ export default function Contact() {
             <div className="w-full flex justify-between items-center mb-6 sm:mb-8 font-mono text-[8px] sm:text-[9px] tracking-[0.24em] uppercase text-[#6f948a]">
               <div ref={tagLeftRef} className="flex items-center gap-1.5 will-change-transform">
                 <span className="text-zinc-600">[</span>
-                <span className="text-[#bed1cb] font-medium">VISÃO // AUTORIA</span>
+                <span className="text-[#bed1cb] font-medium">VISION // AUTHORSHIP</span>
                 <span className="text-zinc-600">]</span>
               </div>
               <div ref={tagRightRef} className="hidden sm:flex items-center gap-1.5 will-change-transform">
                 <span className="text-zinc-600">[</span>
-                <span className="text-zinc-400">DESIGN + ENGENHARIA</span>
+                <span className="text-zinc-400">DESIGN + ENGINEERING</span>
                 <span className="text-zinc-600">]</span>
               </div>
             </div>
@@ -239,13 +239,13 @@ export default function Contact() {
             <div className="w-full flex flex-col items-start overflow-hidden py-2">
               <div ref={line1Ref} className="w-full will-change-transform">
                 <h2 className="font-sans font-light text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] text-[#bed1cb]/75 uppercase sm:whitespace-nowrap">
-                  A MAIORIA DOS SITES <span className="font-normal text-white/90 ml-3 sm:ml-4">É ESQUECÍVEL.</span>
+                  MOST WEBSITES <span className="font-normal text-white/90 ml-3 sm:ml-4">ARE FORGETTABLE.</span>
                 </h2>
               </div>
               <div ref={centerAccentRef} className="w-full max-w-[580px] h-px bg-gradient-to-r from-transparent via-[#4ea895]/40 to-transparent my-4 sm:my-6 will-change-transform origin-left" />
               <div ref={line2Ref} className="w-full will-change-transform pl-[4vw] sm:pl-[8vw] md:pl-[12vw]">
                 <h2 className="font-sans text-[5.8vw] sm:text-[4.8vw] md:text-[4.2vw] lg:text-[3.6vw] leading-[1.05] tracking-[-0.04em] uppercase sm:whitespace-nowrap">
-                  <span className="animate-shimmer-light font-extrabold">O SEU NÃO PRECISA SER.</span>
+                  <span className="animate-shimmer-light font-extrabold">YOURS DOESN&apos;T HAVE TO BE.</span>
                 </h2>
               </div>
             </div>
@@ -259,10 +259,10 @@ export default function Contact() {
             </div>
             <div ref={zoomTextRef} className="flex flex-col items-center justify-center text-center will-change-transform">
               <h2 className="font-sans font-extrabold text-[30vw] sm:text-[26vw] md:text-[22vw] lg:text-[19.2vw] leading-[0.95] tracking-[-0.05em] uppercase text-white drop-shadow-2xl whitespace-nowrap">
-                O PRÓXIMO PASSO
+                THE NEXT STEP
               </h2>
               <h2 className="font-sans font-extrabold text-[32vw] sm:text-[28vw] md:text-[24vw] lg:text-[20.8vw] leading-[0.95] tracking-[-0.05em] uppercase whitespace-nowrap mt-1">
-                <span className="animate-shimmer-light text-white">É SEU.</span>
+                <span className="animate-shimmer-light text-white">IS YOURS.</span>
               </h2>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function Contact() {
               <span className="text-zinc-600">]</span>
             </div>
             <div className="flex items-center gap-2 text-zinc-400">
-              <span className="hidden sm:inline">VAMOS CONVERSAR</span>
+              <span className="hidden sm:inline">LET&apos;S TALK</span>
               <span className="text-[#4ea895] animate-pulse">↓</span>
             </div>
           </div>
@@ -313,13 +313,13 @@ export default function Contact() {
               </span>
               <div className="flex flex-col justify-center">
                 <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180">
-                  /iniciar
+                  /start
                 </span>
               </div>
             </div>
             <div className="flex-1 h-px bg-[#27534b]/12 mx-4 sm:mx-8 md:mx-10" />
             <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#35635a] uppercase shrink-0 font-medium">
-              /CONTATO
+              /CONTACT
             </div>
           </div>
 
@@ -327,22 +327,22 @@ export default function Contact() {
             
             <div className="flex items-center gap-2 font-mono text-[8px] sm:text-[9px] tracking-[0.26em] text-[#6f948a] uppercase mb-4 sm:mb-6">
               <span className="text-zinc-300">[</span>
-              <span className="text-[#27534b] font-semibold">NOVO PROJETO OU OPORTUNIDADE</span>
+              <span className="text-[#27534b] font-semibold">NEW PROJECT OR OPPORTUNITY</span>
               <span className="text-zinc-300">]</span>
             </div>
 
             <div className="max-w-[960px]">
               <h2 className="font-sans font-light text-[2.6rem] sm:text-5xl md:text-6xl lg:text-[4.8rem] tracking-tight leading-[0.98] text-[#10201c]">
-                TEM UMA IDEIA? <br />
+                GOT AN IDEA? <br />
                 <span className="font-extrabold text-[#27534b] animate-shimmer-sage">
-                  VAMOS TORNÁ-LA REAL.
+                  LET&apos;S MAKE IT REAL.
                 </span>
               </h2>
             </div>
 
             <div className="mt-8 sm:mt-12 flex flex-col items-start gap-4">
               <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.22em] text-[#6f948a] uppercase">
-                INICIAR VIA E-MAIL
+                START VIA EMAIL
               </span>
 
               <div className="flex flex-wrap items-center gap-3 sm:gap-4">
@@ -357,9 +357,9 @@ export default function Contact() {
                   <button
                     onClick={handleCopyEmail}
                     className="font-mono text-[8px] sm:text-[9px] tracking-[0.16em] uppercase px-3.5 py-1.5 rounded-full border border-[#27534b]/25 bg-white text-[#27534b] hover:bg-[#27534b] hover:text-white transition-all cursor-pointer active:scale-95 shadow-xs"
-                    aria-label="Copiar e-mail"
+                    aria-label="Copy email"
                   >
-                    {copied ? '✓ COPIADO!' : 'COPIAR ↺'}
+                    {copied ? '✓ COPIED!' : 'COPY ↺'}
                   </button>
 
                   <a
@@ -368,7 +368,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="font-mono text-[8px] sm:text-[9px] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full bg-[#27534b] text-white hover:bg-[#1a3832] transition-all cursor-pointer active:scale-95 shadow-xs whitespace-nowrap"
                   >
-                    WHATSAPP DIRETO →
+                    WHATSAPP DIRECT →
                   </a>
                 </div>
               </div>
@@ -380,19 +380,19 @@ export default function Contact() {
             >
               <div>
                 <span className="block font-mono text-[8px] sm:text-[8.5px] tracking-[0.2em] uppercase text-[#6f948a]">
-                  [ 01 // DISPONIBILIDADE ]
+                  [ 01 // AVAILABILITY ]
                 </span>
                 <p className="font-sans font-medium text-sm sm:text-[15px] text-[#10201c] mt-1.5">
-                  Full-Time · PJ / CLT · Remoto
+                  Full-Time · Contract · Remote
                 </p>
                 <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
-                  Disponível para contratação global
+                  Available for global hire
                 </span>
               </div>
 
               <div>
                 <span className="block font-mono text-[8px] sm:text-[8.5px] tracking-[0.2em] uppercase text-[#6f948a]">
-                  [ 02 // RECURSOS ]
+                  [ 02 // RESOURCES ]
                 </span>
                 <a
                   href={CV_FILE}
@@ -401,24 +401,24 @@ export default function Contact() {
                   className="group inline-flex items-center gap-1.5 font-sans font-medium text-sm sm:text-[15px] text-[#27534b] hover:text-[#1a3832] mt-1.5 cursor-pointer"
                 >
                   <span className="underline decoration-[#27534b]/40 underline-offset-4 group-hover:decoration-[#27534b]">
-                    Ver / Baixar Currículo (CV)
+                    View / Download CV
                   </span>
                   <span className="group-hover:translate-y-0.5 transition-transform text-xs">↗</span>
                 </a>
                 <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
-                  Versão atualizada 2026
+                  Updated 2026
                 </span>
               </div>
 
               <div>
                 <span className="block font-mono text-[8px] sm:text-[8.5px] tracking-[0.2em] uppercase text-[#6f948a]">
-                  [ 03 // LOCALIZAÇÃO ]
+                  [ 03 // LOCATION ]
                 </span>
                 <p className="font-sans font-medium text-sm sm:text-[15px] text-[#10201c] mt-1.5">
-                  Santos, SP — Brasil
+                  Santos, Brazil
                 </p>
                 <span className="hidden sm:block font-mono text-[8.5px] text-[#6f948a] mt-0.5">
-                  Fuso: BRT (UTC−3) · 100% Remoto
+                  Timezone: BRT (UTC−3) · 100% Remote
                 </span>
               </div>
             </div>
@@ -458,7 +458,7 @@ export default function Contact() {
                 onClick={handleScrollToTop}
                 className="group flex items-center gap-1.5 text-[#27534b] font-semibold hover:text-[#1a3832] transition-colors cursor-pointer py-1 px-2 -mr-2"
               >
-                <span>[ VOLTAR AO TOPO</span>
+                <span>[ BACK TO TOP</span>
                 <span className="group-hover:-translate-y-0.5 transition-transform">↑</span>
                 <span>]</span>
               </button>

@@ -384,27 +384,27 @@ export default function Hero({ isLoaded = true }: HeroProps) {
         <div className="hidden md:grid md:grid-cols-5 items-center text-[10.5px] lg:text-[11px] font-mono tracking-[0.24em] font-normal uppercase">
           <div className="group text-left transition-colors duration-300 cursor-pointer">
             <span className="text-zinc-400 mr-1.5 transition-colors group-hover:text-zinc-300">01/</span>
-            <span className="text-white font-medium">INICIO</span>
+            <span className="text-white font-medium">HOME</span>
           </div>
 
           <div className="group text-center transition-colors duration-300 cursor-pointer">
             <span className="text-zinc-400 mr-1.5 transition-colors group-hover:text-zinc-300">02/</span>
-            <span className="text-zinc-200 group-hover:text-white transition-colors">SOBRE</span>
+            <span className="text-zinc-200 group-hover:text-white transition-colors">ABOUT</span>
           </div>
 
           <div className="group text-center transition-colors duration-300 cursor-pointer">
             <span className="text-zinc-400 mr-1.5 transition-colors group-hover:text-zinc-300">03/</span>
-            <span className="text-zinc-200 group-hover:text-white transition-colors">TRABALHOS</span>
+            <span className="text-zinc-200 group-hover:text-white transition-colors">WORK</span>
           </div>
 
           <div className="group text-center transition-colors duration-300 cursor-pointer">
             <span className="text-zinc-400 mr-1.5 transition-colors group-hover:text-zinc-300">04/</span>
-            <span className="text-zinc-200 group-hover:text-white transition-colors">SERVICOS</span>
+            <span className="text-zinc-200 group-hover:text-white transition-colors">SERVICES</span>
           </div>
 
           <div className="group text-right transition-colors duration-300 cursor-pointer">
             <span className="text-zinc-400">[</span>
-            <span className="text-white font-medium mx-1 group-hover:text-zinc-200 transition-colors">CONTATO</span>
+            <span className="text-white font-medium mx-1 group-hover:text-zinc-200 transition-colors">CONTACT</span>
             <span className="text-zinc-400">]</span>
           </div>
         </div>
@@ -412,13 +412,13 @@ export default function Hero({ isLoaded = true }: HeroProps) {
         <div className="flex md:hidden justify-between items-center text-[10px] font-mono tracking-[0.24em] font-normal uppercase">
           <div className="group text-left">
             <span className="text-zinc-400 mr-1.5">01/</span>
-            <span className="text-white font-medium">INICIO</span>
+            <span className="text-white font-medium">HOME</span>
           </div>
 
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="flex items-center gap-2 text-zinc-200 hover:text-white transition-colors cursor-pointer py-1 px-2 active:opacity-70"
-            aria-label="Abrir Menu"
+            aria-label="Open Menu"
           >
             <span className="text-zinc-400">[</span>
             <span className="font-medium text-[10px]">MENU</span>
@@ -436,12 +436,12 @@ export default function Hero({ isLoaded = true }: HeroProps) {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[999] bg-[#121818]/98 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-8 select-none">
           <div className="flex justify-between items-center text-[10px] font-mono tracking-[0.24em] uppercase text-zinc-400 border-b border-white/[0.08] pb-4">
-            <span>[ NAVEGAÇÃO ]</span>
+            <span>[ NAVIGATION ]</span>
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="text-zinc-300 hover:text-white font-medium cursor-pointer py-1 px-2 active:scale-95 transition-all"
             >
-              [ FECHAR ✕ ]
+              [ CLOSE ✕ ]
             </button>
           </div>
 
@@ -451,35 +451,35 @@ export default function Hero({ isLoaded = true }: HeroProps) {
               className="cursor-pointer group flex items-center gap-3 text-white font-medium"
             >
               <span className="text-zinc-400 text-xs">01/</span>
-              <span className="border-b border-white pb-0.5">INICIO</span>
+              <span className="border-b border-white pb-0.5">HOME</span>
             </div>
             <div
               onClick={() => setMobileMenuOpen(false)}
               className="cursor-pointer group flex items-center gap-3 text-zinc-300 hover:text-white transition-colors"
             >
               <span className="text-zinc-500 text-xs">02/</span>
-              <span>SOBRE</span>
+              <span>ABOUT</span>
             </div>
             <div
               onClick={() => setMobileMenuOpen(false)}
               className="cursor-pointer group flex items-center gap-3 text-zinc-300 hover:text-white transition-colors"
             >
               <span className="text-zinc-500 text-xs">03/</span>
-              <span>TRABALHOS</span>
+              <span>WORK</span>
             </div>
             <div
               onClick={() => setMobileMenuOpen(false)}
               className="cursor-pointer group flex items-center gap-3 text-zinc-300 hover:text-white transition-colors"
             >
               <span className="text-zinc-500 text-xs">04/</span>
-              <span>SERVICOS</span>
+              <span>SERVICES</span>
             </div>
             <div
               onClick={() => setMobileMenuOpen(false)}
               className="cursor-pointer group flex items-center gap-2 text-white font-medium mt-4 pt-4 border-t border-white/[0.08]"
             >
               <span className="text-zinc-500">[</span>
-              <span>CONTATO</span>
+              <span>CONTACT</span>
               <span className="text-zinc-500">]</span>
             </div>
           </nav>
@@ -504,23 +504,23 @@ export default function Hero({ isLoaded = true }: HeroProps) {
         </div>
         <p className="font-mono text-[8px] sm:text-[9.5px] md:text-[10px] lg:text-[11px] uppercase leading-[1.6] md:leading-[1.65] text-zinc-200/90 tracking-wider">
           <span className="text-white font-semibold">
-            <GlitchDecode text="Experiências digitais imersivas" isTriggered={isLoaded} delay={300} duration={500} />
+            <GlitchDecode text="Immersive digital experiences" isTriggered={isLoaded} delay={300} duration={500} />
           </span>{' '}
-          <GlitchDecode text="construídas entre" isTriggered={isLoaded} delay={400} duration={450} />{' '}
+          <GlitchDecode text="built across" isTriggered={isLoaded} delay={400} duration={450} />{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="direção de arte" isTriggered={isLoaded} delay={480} duration={400} />
+            <GlitchDecode text="art direction" isTriggered={isLoaded} delay={480} duration={400} />
           </span>
           ,{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="design de interação" isTriggered={isLoaded} delay={540} duration={450} />
+            <GlitchDecode text="interaction design" isTriggered={isLoaded} delay={540} duration={450} />
           </span>
           ,{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="movimento" isTriggered={isLoaded} delay={600} duration={400} />
+            <GlitchDecode text="motion" isTriggered={isLoaded} delay={600} duration={400} />
           </span>{' '}
           e{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="engenharia de software." isTriggered={isLoaded} delay={660} duration={500} />
+            <GlitchDecode text="software engineering." isTriggered={isLoaded} delay={660} duration={500} />
           </span>
         </p>
       </div>
@@ -546,17 +546,17 @@ export default function Hero({ isLoaded = true }: HeroProps) {
         </div>
         <p className="font-mono text-[8px] sm:text-[9.5px] md:text-[10px] lg:text-[11px] uppercase leading-[1.6] md:leading-[1.65] text-zinc-200/90 tracking-wider">
           <span className="text-white font-semibold">
-            <GlitchDecode text="Direção visual," isTriggered={isLoaded} delay={450} duration={450} />
+            <GlitchDecode text="Visual direction," isTriggered={isLoaded} delay={450} duration={450} />
           </span>{' '}
-          <GlitchDecode text="prototipagem avançada," isTriggered={isLoaded} delay={520} duration={450} />{' '}
+          <GlitchDecode text="advanced prototyping," isTriggered={isLoaded} delay={520} duration={450} />{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="interação" isTriggered={isLoaded} delay={580} duration={400} />
+            <GlitchDecode text="interaction" isTriggered={isLoaded} delay={580} duration={400} />
           </span>{' '}
           e{' '}
           <span className="text-white font-semibold">
-            <GlitchDecode text="desenvolvimento criativo" isTriggered={isLoaded} delay={640} duration={500} />
+            <GlitchDecode text="creative development" isTriggered={isLoaded} delay={640} duration={500} />
           </span>{' '}
-          <GlitchDecode text="unificados em uma mesma prática." isTriggered={isLoaded} delay={720} duration={550} />
+          <GlitchDecode text="unified into a single practice." isTriggered={isLoaded} delay={720} duration={550} />
         </p>
         <div className="mt-1 sm:mt-2 text-[8px] sm:text-[10px] font-mono tracking-widest text-zinc-400">
           <span className="text-white font-semibold">*</span>{'//'}

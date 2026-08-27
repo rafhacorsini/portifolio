@@ -111,13 +111,13 @@ export default function Footer() {
           </span>
           <div className="flex flex-col justify-center">
             <span className="text-[8px] sm:text-[9px] font-mono tracking-wider text-zinc-300 uppercase [writing-mode:vertical-lr] rotate-180">
-              /fim
+              /end
             </span>
           </div>
         </div>
         <div className="flex-1 h-px bg-white/[0.08] mx-4 sm:mx-8 md:mx-10" />
         <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.24em] text-zinc-300 uppercase shrink-0 font-medium">
-          /CRÉDITOS
+          /CREDITS
         </div>
       </div>
 
@@ -136,7 +136,7 @@ export default function Footer() {
         </h2>
 
         <p className="font-mono text-[8px] sm:text-[9.5px] tracking-[0.24em] uppercase text-zinc-300/80 mt-4 max-w-[500px]">
-          CRIATIVO & DESENVOLVEDOR FRONT-END · BRASIL
+          CREATIVE & FRONT-END DEVELOPER · BRAZIL
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default function Footer() {
         </div>
 
         <div data-parallax="0.15" className="hidden lg:block text-zinc-400">
-          <span>SANTOS / SP · 23°57&apos;S 46°20&apos;W</span>
+          <span>SANTOS, BRAZIL · 23°57&apos;S 46°20&apos;W</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -168,7 +168,7 @@ export default function Footer() {
             onClick={handleScrollToTop}
             className="group flex items-center gap-1.5 text-white hover:text-zinc-200 transition-colors cursor-pointer py-1 px-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/5 active:scale-95"
           >
-            <span>VOLTAR AO TOPO</span>
+            <span>BACK TO TOP</span>
             <span className="group-hover:-translate-y-0.5 transition-transform">↑</span>
           </button>
         </div>

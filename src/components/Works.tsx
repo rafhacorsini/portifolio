@@ -388,7 +388,7 @@ export default function Works() {
 
       <div className="hidden lg:block pointer-events-none absolute top-1/2 right-4 xl:right-6 -translate-y-1/2 z-[3] select-none">
         <span className="block font-mono text-[9px] tracking-[0.32em] uppercase text-[#6f948a]/25 [writing-mode:vertical-lr] rotate-180 whitespace-nowrap">
-          Menos, mas melhor
+          Less, but better
         </span>
       </div>
 
@@ -420,7 +420,7 @@ export default function Works() {
                     {project.number}
                   </span>
                   <span className="font-mono text-[8px] tracking-[0.3em] uppercase text-white/25">
-                    [ imagem ]
+                    [ image ]
                   </span>
                 </div>
               </>
@@ -453,7 +453,7 @@ export default function Works() {
             </span>
             <div className="flex flex-col justify-center">
               <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180 select-none">
-                /índice
+                /index
               </span>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function Works() {
           <div ref={headerLineRef} className="flex-1 h-px bg-white/[0.08] mx-4 sm:mx-8 md:mx-10" />
 
           <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#bed1cb] uppercase select-none shrink-0 font-medium">
-            /TRABALHOS
+            /WORK
           </div>
         </div>
 
@@ -565,8 +565,8 @@ export default function Works() {
           />
 
           <div className="flex items-center justify-between gap-4 pt-4 sm:pt-5 font-mono text-[7.5px] sm:text-[8px] tracking-[0.22em] uppercase text-[#4a6a63]/70 select-none">
-            <span className="whitespace-nowrap">[ FIM DO ÍNDICE ]</span>
-            <span className="whitespace-nowrap">SANTOS, BR — 2026</span>
+            <span className="whitespace-nowrap">[ END OF INDEX ]</span>
+            <span className="whitespace-nowrap">SANTOS, BRAZIL — 2026</span>
           </div>
         </div>
       </div>

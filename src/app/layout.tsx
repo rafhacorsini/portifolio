@@ -24,21 +24,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.rcorsini.com"),
   title: "Rafhael Corsini — Creative Developer",
   description:
-    "Portfólio de Rafhael Corsini, desenvolvedor criativo especializado em design de interface, motion e experiências digitais imersivas.",
+    "Portfolio of Rafhael Corsini, a creative developer specializing in interface design, motion and immersive digital experiences.",
   openGraph: {
     title: "Rafhael Corsini — Creative Developer",
     description:
-      "Portfólio de Rafhael Corsini, desenvolvedor criativo especializado em design de interface, motion e experiências digitais imersivas.",
+      "Portfolio of Rafhael Corsini, a creative developer specializing in interface design, motion and immersive digital experiences.",
     url: "https://www.rcorsini.com",
     siteName: "Rafhael Corsini",
-    locale: "pt_BR",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "Rafhael Corsini — Creative Developer",
     description:
-      "Portfólio de Rafhael Corsini, desenvolvedor criativo especializado em design de interface, motion e experiências digitais imersivas.",
+      "Portfolio of Rafhael Corsini, a creative developer specializing in interface design, motion and immersive digital experiences.",
   },
   robots: {
     index: true,
@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-BR"
+      lang="en"
       className={`${inter.variable} ${ibmPlexMono.variable} ${syne.variable} font-sans antialiased`}
     >
       <body className="min-h-screen flex flex-col">

@@ -224,7 +224,7 @@ export default function About() {
           </span>
           <div className="flex flex-col justify-center">
             <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180 select-none">
-              /introdução
+              /intro
             </span>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function About() {
         <div ref={headerLineRef} className="flex-1 h-px bg-[#27534b]/12 mx-4 sm:mx-8 md:mx-10" />
 
         <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#35635a] uppercase select-none shrink-0 font-medium">
-          /SOBRE
+          /ABOUT
         </div>
       </div>
 
@@ -241,33 +241,33 @@ export default function About() {
           <h2 className="font-sans font-light text-[1.3rem] sm:text-xl md:text-[1.9rem] lg:text-[2.15rem] leading-[1.12] sm:leading-[1.08] tracking-[-0.055em] sm:tracking-[-0.06em] text-[#27534b] max-w-[540px]">
             <span
               ref={(el) => { if (el) titleLinesRef.current[0] = el; }}
-              className="block pl-4 sm:pl-8 md:pl-14 whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
+              className="block pl-4 sm:pl-8 md:pl-14 sm:whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
             >
               Front-end designer
             </span>
             <span
               ref={(el) => { if (el) titleLinesRef.current[1] = el; }}
-              className="block whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
+              className="block sm:whitespace-nowrap will-change-transform text-[#27534b]/80 font-light"
             >
-              e desenvolvedor criativo
+              and creative developer
             </span>
             <span
               ref={(el) => { if (el) titleLinesRef.current[2] = el; }}
-              className="block whitespace-nowrap will-change-transform"
+              className="block sm:whitespace-nowrap will-change-transform"
             >
               <span className="animate-shimmer-sage font-extrabold">
-                com foco em experiências
+                focused on digital
               </span>
             </span>
             <span
               ref={(el) => { if (el) titleLinesRef.current[3] = el; }}
-              className="block whitespace-nowrap will-change-transform"
+              className="block sm:whitespace-nowrap will-change-transform"
             >
               <span className="animate-shimmer-sage font-extrabold">
-                digitais,
+                experiences,
               </span>{' '}
               <span className="text-[#27534b]/80 font-light">
-                motion e narrativa visual.
+                motion and visual storytelling.
               </span>
             </span>
           </h2>
@@ -276,7 +276,7 @@ export default function About() {
             ref={subParagraphRef}
             className="mt-4 sm:mt-5 font-mono text-[11px] sm:text-[11.5px] md:text-[12px] leading-[1.48] tracking-[-0.025em] text-[#5b8278] max-w-[340px] sm:max-w-[390px] md:max-w-[430px] will-change-transform"
           >
-            Meu trabalho nasce da vontade de transformar websites em experiências que despertam curiosidade — onde cada movimento, transição e detalhe existe por uma razão.
+            My work comes from a drive to turn websites into experiences that spark curiosity — where every movement, transition and detail exists for a reason.
           </p>
 
           <div
@@ -286,37 +286,37 @@ export default function About() {
           >
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Campo
+                Field
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Design e Desenvolvimento
+                Design & Development
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Abordagem
+                Approach
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Menos, mas melhor
+                Less, but better
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Localizacao
+                Location
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Santos - SP
+                Santos, Brazil
               </span>
             </div>
 
             <div>
               <span className="block font-mono font-semibold text-[11px] sm:text-xs text-[#27534b] uppercase tracking-wider">
-                Foco
+                Focus
               </span>
               <span className="block font-mono text-[11px] sm:text-xs text-[#6f948a] mt-0.5">
-                Web · Motion · IA
+                Web · Motion · AI
               </span>
             </div>
           </div>
@@ -401,7 +401,7 @@ export default function About() {
                   +05
                 </span>
                 <span className="font-mono text-[7px] sm:text-[7.5px] leading-tight text-white/80 uppercase mt-1 tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                  Anos Exp.
+                  Years Exp.
                 </span>
               </div>
 
@@ -410,7 +410,7 @@ export default function About() {
                   100%
                 </span>
                 <span className="font-mono text-[7px] sm:text-[7.5px] leading-tight text-white/80 uppercase mt-1 tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                  Detalhes
+                  Details
                 </span>
               </div>
 

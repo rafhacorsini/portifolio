@@ -34,12 +34,12 @@ const CARDS: ServiceCard[] = [
     id: 's1',
     variant: 'graphite',
     num: '01',
-    title: 'Desenvolvimento',
+    title: 'Development',
     tag: 'NEXT.JS · REACT · NODE · LLMS',
-    detailTitle: 'Engenharia Full-stack & IA',
-    whatItDoes: 'Construção de aplicações completas e escaláveis, integrando frontend moderno com agentes de IA, automações e APIs de alta performance.',
-    whoItsFor: 'Startups, produtos digitais e empresas que precisam de código limpo, velocidade e inteligência artificial nativa.',
-    deliverables: 'WEB APPS · APIS · AGENTES IA · BANCO DE DADOS',
+    detailTitle: 'Full-Stack Engineering & AI',
+    whatItDoes: 'Building complete, scalable applications that integrate modern frontend with AI agents, automation and high-performance APIs.',
+    whoItsFor: 'Startups, digital products and companies that need clean code, speed and native artificial intelligence.',
+    deliverables: 'WEB APPS · APIS · AI AGENTS · DATABASES',
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <path {...gp} d="M9 7 4 12l5 5M15 7l5 5-5 5" />
@@ -52,10 +52,10 @@ const CARDS: ServiceCard[] = [
     num: '02',
     title: 'Web Design',
     tag: 'UI/UX · FIGMA · DESIGN SYSTEM',
-    detailTitle: 'Design de Interface & Direção Visual',
-    whatItDoes: 'Criação de linguagens visuais exclusivas, sistemas de design consistentes e interfaces focadas em usabilidade e autoridade de marca.',
-    whoItsFor: 'Marcas e fundadores que desejam elevar a percepção de valor e criar uma presença digital memorável.',
-    deliverables: 'UI/UX · DESIGN SYSTEM · PROTÓTIPOS FIGMA · ART DIRECTION',
+    detailTitle: 'Interface Design & Visual Direction',
+    whatItDoes: 'Crafting exclusive visual languages, consistent design systems and interfaces focused on usability and brand authority.',
+    whoItsFor: 'Brands and founders who want to elevate perceived value and build a memorable digital presence.',
+    deliverables: 'UI/UX · DESIGN SYSTEM · FIGMA PROTOTYPES · ART DIRECTION',
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <rect {...gp} x="4" y="4" width="16" height="16" rx="1.5" />
@@ -67,12 +67,12 @@ const CARDS: ServiceCard[] = [
     id: 's3',
     variant: 'graphite',
     num: '03',
-    title: 'Motion / Interação',
+    title: 'Motion / Interaction',
     tag: 'GSAP · LENIS · THREE.JS · SHADERS',
-    detailTitle: 'Motion & Engenharia Criativa',
-    whatItDoes: 'Animações fluidas a 60fps, transições cinematográficas e interatividade WebGL que transformam páginas comuns em experiências vivas.',
-    whoItsFor: 'Projetos que buscam destaque criativo, prêmios internacionais e engajamento acima da média.',
-    deliverables: 'GSAP SCROLL · THREE.JS · WEBGL · MICRO-INTERAÇÕES',
+    detailTitle: 'Motion & Creative Engineering',
+    whatItDoes: 'Fluid 60fps animations, cinematic transitions and WebGL interactivity that turn ordinary pages into living experiences.',
+    whoItsFor: 'Projects chasing creative standout, international awards and above-average engagement.',
+    deliverables: 'GSAP SCROLL · THREE.JS · WEBGL · MICRO-INTERACTIONS',
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
         <path {...gp} d="M4 17C8 6 16 6 20 17" />
@@ -84,11 +84,11 @@ const CARDS: ServiceCard[] = [
     id: 's4',
     variant: 'sage',
     num: '04',
-    title: 'Estratégia / SEO',
+    title: 'Strategy / SEO',
     tag: 'CORE VITALS · SEO · GROWTH',
-    detailTitle: 'Performance & Otimização Técnica',
-    whatItDoes: 'Otimização minuciosa para carregamento instantâneo, pontuação 100 no Core Web Vitals e indexação técnica máxima no Google.',
-    whoItsFor: 'Negócios que buscam tráfego qualificado, melhor conversão e máxima velocidade em qualquer dispositivo.',
+    detailTitle: 'Performance & Technical Optimization',
+    whatItDoes: 'Meticulous optimization for instant loading, a perfect Core Web Vitals score and maximum technical indexing on Google.',
+    whoItsFor: 'Businesses looking for qualified traffic, better conversion and maximum speed on any device.',
     deliverables: 'CORE VITALS 100/100 · SEO ON-PAGE · CRO · ANALYTICS',
     glyph: (
       <svg viewBox="0 0 24 24" className="w-full h-full">
@@ -155,7 +155,7 @@ const finalPose = (i: number) => ({
   scale: () => layout().finalScale,
 });
 
-const TECH_TAGS = ['FRONTEND', 'BACKEND', 'WEBGL', 'GSAP', 'FIGMA', 'IA / LLM'];
+const TECH_TAGS = ['FRONTEND', 'BACKEND', 'WEBGL', 'GSAP', 'FIGMA', 'AI / LLM'];
 
 export default function Services() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -375,13 +375,13 @@ export default function Services() {
             </span>
             <div className="flex flex-col justify-center">
               <span className="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-[#6f948a] uppercase [writing-mode:vertical-lr] rotate-180">
-                /capacidades
+                /capabilities
               </span>
             </div>
           </div>
           <div ref={headerLineRef} className="flex-1 h-px bg-[#27534b]/12 mx-4 sm:mx-8 md:mx-10" />
           <div className="font-mono text-[9.5px] sm:text-xs tracking-[0.24em] text-[#35635a] uppercase shrink-0 font-medium">
-            /SERVIÇOS
+            /SERVICES
           </div>
         </div>
 
@@ -391,7 +391,7 @@ export default function Services() {
             className="absolute top-[6.5rem] sm:top-[7.8rem] md:top-[9rem] lg:top-[10rem] left-6 sm:left-10 md:left-16 lg:left-20 flex items-center gap-1.5 font-mono text-[8px] sm:text-[9px] tracking-[0.22em] uppercase"
           >
             <span className="text-zinc-400">[</span>
-            <span className="text-[#27534b] font-medium">CAPACIDADES TÉCNICAS // 04 PILARES</span>
+            <span className="text-[#27534b] font-medium">TECHNICAL CAPABILITIES // 04 PILLARS</span>
             <span className="text-zinc-400">]</span>
           </div>
 
@@ -417,7 +417,7 @@ export default function Services() {
             className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 will-change-transform"
           >
             <span className="block font-mono text-[8.5px] tracking-[0.32em] uppercase text-[#6f948a]/50 [writing-mode:vertical-lr] rotate-180 whitespace-nowrap">
-              DESIGN · CÓDIGO · MOTION · IA
+              DESIGN · CODE · MOTION · AI
             </span>
           </div>
 
@@ -426,7 +426,7 @@ export default function Services() {
             className="absolute bottom-6 sm:bottom-9 md:bottom-12 inset-x-6 sm:inset-x-10 md:inset-x-16 lg:inset-x-20 flex items-center justify-between font-mono text-[7.5px] sm:text-[8px] tracking-[0.22em] uppercase text-[#4a6a63]/80 border-t border-[#27534b]/10 pt-3 sm:pt-4"
           >
             <div className="flex items-center">
-              <span>[ DISPONÍVEL PARA PROJETOS SELECIONADOS ]</span>
+              <span>[ AVAILABLE FOR SELECTED PROJECTS ]</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="hidden sm:inline text-zinc-400">{'//'}</span>
@@ -470,7 +470,7 @@ export default function Services() {
                     <span className={`font-mono text-[7.5px] tracking-[0.2em] uppercase px-2 py-0.5 rounded-full border backdrop-blur-xs ${
                       dark ? 'border-white/15 bg-white/10 text-white/80' : 'border-black/10 bg-black/10 text-[#10201c]'
                     }`}>
-                      DETALHES ↺
+                      DETAILS ↺
                     </span>
                     <span className={`font-mono text-[13px] font-medium tracking-[0.2em] ${inkSoft}`}>
                       {card.num}
@@ -532,7 +532,7 @@ export default function Services() {
                 >
                   <div className={`flex items-center justify-between border-b pb-2 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
                     <span className={`font-mono text-[8px] tracking-[0.2em] uppercase font-semibold ${dark ? 'text-white/90' : 'text-[#10201c]'}`}>
-                      [ 0{index + 1} {'//'} ESCOPO ]
+                      [ 0{index + 1} {'//'} SCOPE ]
                     </span>
                     <span className={`font-mono text-[8px] tracking-[0.16em] uppercase ${inkSoft}`}>
                       {card.title}
@@ -548,7 +548,7 @@ export default function Services() {
 
                     <div className="flex flex-col gap-0.5">
                       <span className={`font-mono text-[7px] tracking-[0.22em] uppercase font-semibold ${dark ? 'text-[#a3c9c1]' : 'text-[#27534b]'}`}>
-                        O QUE FAZ:
+                        WHAT IT DOES:
                       </span>
                       <p className={`font-mono text-[8.5px] leading-[1.48] tracking-normal ${inkSoft}`}>
                         {card.whatItDoes}
@@ -557,7 +557,7 @@ export default function Services() {
 
                     <div className="hidden sm:flex flex-col gap-0.5">
                       <span className={`font-mono text-[7px] tracking-[0.22em] uppercase font-semibold ${dark ? 'text-[#a3c9c1]' : 'text-[#27534b]'}`}>
-                        PARA QUEM É:
+                        WHO IT&apos;S FOR:
                       </span>
                       <p className={`font-mono text-[8.5px] leading-[1.48] tracking-normal ${inkSoft}`}>
                         {card.whoItsFor}
@@ -567,7 +567,7 @@ export default function Services() {
 
                   <div className={`hidden sm:flex border-t pt-2 flex-col gap-0.5 ${dark ? 'border-white/10' : 'border-[#10201c]/10'}`}>
                     <span className={`font-mono text-[6.5px] tracking-[0.22em] uppercase ${dark ? 'text-white/50' : 'text-[#10201c]/50'}`}>
-                      ENTREGÁVEIS:
+                      DELIVERABLES:
                     </span>
                     <span className={`font-mono text-[7px] tracking-[0.14em] uppercase ${ink} truncate`}>
                       {card.deliverables}
